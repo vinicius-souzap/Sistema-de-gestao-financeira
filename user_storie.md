@@ -1,12 +1,12 @@
 # Sistema-de-gestao-financeira
 Nesse repositório apresentamos as histórias dos usuários do grupo com o tema de: Sistema de gestão financeira:
-Sistema de Gerenciamento Financeiro
-1. User Stories
-• Descrição:
-Como gerente de contratos, gostaria de visualizar uma determinada ordem de serviço (OS), para verificar as informações do contrato firmado com o cliente, além do engenheiro responsável.
-• Critérios de aceitação:
-  Informar uma breve descrição.
-  Informar engenheiro responsável.
+Sistema de Gerenciamento Financeiro;
+1. User Stories;
+• Descrição:;
+Como gerente de contratos, gostaria de visualizar uma determinada ordem de serviço (OS), para verificar as informações do contrato firmado com o cliente, além do engenheiro responsável.;
+• Critérios de aceitação:;
+  Informar uma breve descrição.;
+  Informar engenheiro responsável.;
   Informar o cliente final.
   Informar data de assinatura do contrato.
   Informar o valor do contrato firmado.
