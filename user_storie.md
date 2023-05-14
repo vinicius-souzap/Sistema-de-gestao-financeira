@@ -4,7 +4,7 @@ Sistema de Gerenciamento Financeiro
 1. User Stories
 • Descrição:;
 Como gerente de contratos, gostaria de visualizar uma determinada ordem de serviço (OS), para verificar as informações do contrato firmado com o cliente, além do engenheiro responsável.
-• Critérios de aceitação:
+• Critérios de aceitação:xss
   Informar uma breve descrição.
   Informar engenheiro responsável.
   Informar o cliente final.
