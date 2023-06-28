@@ -14,10 +14,6 @@
  */
 class Orcamentista : public Funcionario
 {
-    private:
-        std::vector<Proposta*> listaPropostas;
-        double totalFechado;
-        double meta;       
 
 };
 
