@@ -27,4 +27,63 @@ Contador::~Contador(){};
  * @param _dataPagamento Data que o pagamento foi efetuado
  */
 
+void Contador::setPagamento(int _numOrdem, double _valor, std::string _dataPagamento){
+
+    bool encontrado;
+    bool sucessoPagamento;
+
+    if(!this->listaOrdens.empty()){
+        for(auto it = this->listaOrdens.begin(); it != this->listaOrdens.end(); it ++){
+            OrdemServico* aux = *it;
+
+            if(aux->getNumOrdem() == _numOrdem && !aux->ordemPaga()){
+                aux->setPagamento(_valor, _dataPagamento);
+                encontrado = true;
+            } else if(aux->getNumOrdem() == _numOrdem && aux->ordemPaga()){
+                throw AlreadyExecuted();
+            }  
+        }
+    } else{
+        throw QueueEmptyException();
+    }
+
+    if(!encontrado)
+        throw ItemNotFoundException();
+};
+
+/**
+ * @brief Imprime na tela o status do pagamento da Ordem de 
+ * Serviço indicada
+ * @param _numOrdem Número da Ordem de Serviço que será impressa
+ */
+void Contador::printStatusPagamento(int _numOrdem){
+    
+    bool encontrado;
+
+    if(!this->listaOrdens.empty()){
+        for(auto it = this->listaOrdens.begin(); it != this->listaOrdens.end(); it ++){
+            OrdemServico* aux = *it;
+
+            if(aux->getNumOrdem() == _numOrdem){
+                if(aux->ordemPaga())
+                    std::cout << "Ordem de Serviço já teve seu contrato pago." << std::endl;
+                else
+                    std::cout << "Pagamento da Ordem de Serviço ainda está pendente." << std::endl;
+
+                encontrado = true;
+            }  
+        }
+    } else{
+        throw QueueEmptyException();
+    }
+
+    if(!encontrado)
+        throw ItemNotFoundException();
+
+};
+
+/**
+ * @brief Imprime na tela todas as Ordens cadastradas
+ */
+
 };
