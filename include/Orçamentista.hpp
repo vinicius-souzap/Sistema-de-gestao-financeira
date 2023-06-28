@@ -14,7 +14,22 @@
  */
 class Orcamentista : public Funcionario
 {
+  private:
+        std::vector<Proposta*> listaPropostas;
+        double totalFechado;
+        double meta;       
 
+    public:
+        Orcamentista(std::string _nome, int _identificacao, int _idade, double _salario, double _meta);
+        virtual ~Orcamentista();
+        double getTotalFechado();
+        double getMeta();
+        double metaAlcancada();
+        void adicionarProposta(Proposta* _proposta);
+        void imprimirPropostasAbertas();
+        void imprimirPropostasFechadas();
+        void progressoMeta();
+        virtual void printInfo() override;
 };
 
 #endif
