@@ -19,6 +19,15 @@ class Funcionario
         int identificacao;
         int idade;
         double salario;
+
+    public:
+        Funcionario(std::string _nome, int _identificacao, int _idade, double _salario);
+        virtual ~Funcionario();
+        virtual std::string getNome();
+        virtual int getId();
+        virtual int getIdade();
+        virtual double getSalario();
+        virtual void printInfo();
 };
 
 #endif
