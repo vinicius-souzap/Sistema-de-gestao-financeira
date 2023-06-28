@@ -21,7 +21,30 @@ class OrdemServico {
         std::string dataEntrega;
         std::string engResponsavel;
         bool concluida;
-    
+
+     public:
+        OrdemServico(int _numOrdem, Proposta* _proposta, std::string _dataAssinatura);
+        OrdemServico();
+        
+        int getOrdemAtual();
+        int getNumOrdem();
+        bool ordemPaga();
+        double getValor();
+        
+        void setContrato(Proposta* _contratoFechado);
+        void setPagamento(double _valor, std::string _dataPagamento);
+        void setDataEntrega(std::string _dataEntrega);  
+        void setEngenheiro(std::string _engResponsavel);
+        int getIdProposta();
+        std::string getDataEntrega();
+        std::string getNomeEngenheiro();
+        bool getStatus();
+        
+        void printTela();
+        void printArquivo(std::ostream& out);
+        void lerArquivo(std::istream& in);
+        friend std::ostream& operator<<(std::ostream& out, OrdemServico& oS);
+        friend std::istream& operator>>(std::istream& in, OrdemServico& oS);
 };
 
 #endif
