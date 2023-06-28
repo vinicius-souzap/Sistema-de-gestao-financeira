@@ -26,7 +26,6 @@ Contador::~Contador(){};
  * @param _valor Valor que deve ser pago pela Ordem de serviço
  * @param _dataPagamento Data que o pagamento foi efetuado
  */
-
 void Contador::setPagamento(int _numOrdem, double _valor, std::string _dataPagamento){
 
     bool encontrado;
@@ -85,5 +84,46 @@ void Contador::printStatusPagamento(int _numOrdem){
 /**
  * @brief Imprime na tela todas as Ordens cadastradas
  */
+void Contador::printListaOS(){
 
+    if(!this->listaOrdens.empty()){
+        for(auto it = this->listaOrdens.begin(); it != this->listaOrdens.end(); it ++){
+            OrdemServico* aux = *it;  
+            aux->printTela();
+        }
+    } else{
+        throw QueueEmptyException();
+    }   
 };
+
+/**
+ * @brief Imprime na tela a soma dos pagamentos recebidos
+ * e a soma dos pagamentos pendentes
+ * Serviço indicada
+ */
+void Contador::printHistoricoFinanceiro(){
+
+    this->receitaBruta = 0;
+    this->receitaPendente = 0;
+
+    if(!this->listaOrdens.empty()){
+        for(auto it = this->listaOrdens.begin(); it != this->listaOrdens.end(); it ++){
+            OrdemServico* aux = *it;  
+            
+            if(aux->ordemPaga())
+                this->receitaBruta += aux->getValor();
+            else
+                this->receitaPendente += aux->getValor();
+        }
+
+        std::cout << "Receita Bruta: R$" << std::fixed << std::setprecision(2) << this->receitaBruta;
+        std::cout << std::endl;
+
+        std::cout << "Receita Pendente: R$" << std::fixed << std::setprecision(2) << this->receitaPendente;
+        std::cout << std::endl;
+
+    } else{
+        throw QueueEmptyException();
+    }     
+};
+
