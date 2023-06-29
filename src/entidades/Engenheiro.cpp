@@ -71,4 +71,31 @@ void Engenheiro::encerrarTarefa(int _numOrdem, std::string _dataEntrega){
     if(!encontrado)
         throw ItemNotFoundException(); 
 };
+/**
+ * @brief Imprime na tela todas as tarefas atribuidas
+ * ao engenheiro
+ */
+void Engenheiro::printListaTarefas(){
 
+    if(!this->listaTarefas.empty()){
+        for(auto it = this->listaTarefas.begin(); it != this->listaTarefas.end(); it ++){
+            OrdemServico* aux = *it;  
+            aux->printTela();
+        }
+    } else{
+        throw QueueEmptyException();
+    }   
+};
+
+/**
+ * @brief Imprime na tela todas as informações
+ * do engenheiro
+ */
+void Engenheiro::printInfo(){
+    
+    std::cout << "Nome: " << this->nome << std::endl
+              << "Idade: " << this->idade << std::endl 
+              << "Nº Identificação: " << this->identificacao << std::endl
+              << "Salário: " << this->salario << std::endl
+              << "Meta: " << this->getNumTarefas() << std::endl;
+};
