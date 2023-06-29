@@ -21,5 +21,54 @@ Engenheiro::~Engenheiro(){};
  * engenheiro referenciado
  * @return Quantidade de tarefas do engenheiro
  */
+int Engenheiro::getNumTarefas(){
 
+    return this->listaTarefas.size();
+};
+
+/**
+ * @brief Atribui nova tarefa ao engenheiro
+ * @param _ordemServico Ordem de serviço que
+ * será atribuida
+ */
+void Engenheiro::adicionarTarefa(OrdemServico* _ordemServico){
+
+    if(this->listaTarefas.size() == MAX_ATIVIDADES){
+        throw QueueFullException();
+    } else{
+        this->listaTarefas.push_back(_ordemServico);
+        _ordemServico->setEngenheiro(this->nome);
+    }
+};
+
+/**
+ * @brief Finaliza tarefa que foi atribuida ao
+ * engenheiro
+ * @param _numOrdem Número da ordem de serviço
+ * finalizada
+ * @param _dataEntrega Data de finalização da 
+  * ordem de serviço
+ */
+void Engenheiro::encerrarTarefa(int _numOrdem, std::string _dataEntrega){
+
+    bool encontrado;
+    
+    if(!this->listaTarefas.empty()){
+        for(int i = 0; i < this->listaTarefas.size(); i++){            
+            if(this->listaTarefas.at(i)->getNumOrdem() == _numOrdem && !this->listaTarefas.at(i)->getStatus()){
+                this->listaTarefas.at(i)->setDataEntrega(_dataEntrega);
+                this->listaTarefas.at(i)->setEngenheiro("");
+                this->listaTarefas.erase(this->listaTarefas.begin() + i);
+                encontrado = true;
+            } else if(this->listaTarefas.at(i)->getNumOrdem() == _numOrdem && this->listaTarefas.at(i)->getStatus()){
+                throw AlreadyExecuted();
+            }
+        }
+    } else{
+        throw QueueEmptyException();
+    }
+
+    if(!encontrado)
+        throw ItemNotFoundException(); 
+};
 
