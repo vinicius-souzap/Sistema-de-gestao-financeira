@@ -21,9 +21,5 @@ Engenheiro::~Engenheiro(){};
  * engenheiro referenciado
  * @return Quantidade de tarefas do engenheiro
  */
-int Engenheiro::getNumTarefas(){
-
-    return this->listaTarefas.size();
-};
 
 
