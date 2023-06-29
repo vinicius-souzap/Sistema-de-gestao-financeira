@@ -12,3 +12,18 @@ Engenheiro::Engenheiro(std::string _nome, int _identificacao, int _idade, double
               : Funcionario(_nome, _identificacao, _idade, _salario){};
 
 /**
+ * @brief Destrutor da classe Engenheiro
+ */
+Engenheiro::~Engenheiro(){};
+
+/**
+ * @brief Calcula a quanatidade de tarefas do
+ * engenheiro referenciado
+ * @return Quantidade de tarefas do engenheiro
+ */
+int Engenheiro::getNumTarefas(){
+
+    return this->listaTarefas.size();
+};
+
+
