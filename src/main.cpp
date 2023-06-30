@@ -1,1 +1,6 @@
-
+#include "Proposta.hpp"
+#include "OrdemServico.hpp"
+#include "Funcionario.hpp"
+#include "Engenheiro.hpp"
+#include "Orcamentista.hpp"
+#include "Contador.hpp"
