@@ -13,6 +13,7 @@ class OrdemServico;
  * confirmar o pagamento dos contratos e gerar relatórios relacionados ao
  * financeiro da empresa
  */
+
 class Contador : public Funcionario
 {
     private:
