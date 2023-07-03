@@ -12,6 +12,7 @@
  * classes Contadores, Orçamentistas e Engenheiros, de forma a implementar 
  * os conceitos de modularização vistos em sala de aula.
 */
+
 class Funcionario
 {
     protected:
