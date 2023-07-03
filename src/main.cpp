@@ -38,3 +38,37 @@ void mostrarPropostasAberto(std::vector<Proposta*>& propostas){
     else
         throw QueueEmptyException();   
 }
+
+/**
+ * @brief printa na tela todas as ordens de serviços já cadastradas
+ * @param ordens array de ordens de serviços que será verificado
+ */
+
+void mostrarOrdensServico(std::vector<OrdemServico*>& ordens){
+    
+    if(!ordens.empty())   
+        for(auto it = ordens.begin(); it != ordens.end(); it++){
+            OrdemServico* aux = *it;
+            aux->printTela();
+        }
+    else
+        throw QueueEmptyException(); 
+}
+
+/**
+ * @brief printa na tela somente propostas que não foram 
+ * atribuídas como tarefa para um Engenheiro
+ * @param ordens array de ordens de serviços que será verificado
+ */
+void mostrarOrdensServicoAberta(std::vector<OrdemServico*>& ordens){
+    
+    if(!ordens.empty())
+        for(auto it = ordens.begin(); it != ordens.end(); it++){
+            OrdemServico* aux = *it;
+            
+            if(aux->getStatus() == false)
+                aux->printTela();
+        }
+    else
+        throw QueueEmptyException();
+}
