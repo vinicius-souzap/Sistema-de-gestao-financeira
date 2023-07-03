@@ -3,34 +3,42 @@
 
 #include <string>
 
-class QueueFullException{
+class QueueFullException
+{
     public:
     std::string name = "QueueFullException"; 
-    std::string what(){
+    std::string what()
+    {
         return "Excessão: " + this->name;
     }
 };
 
-class QueueEmptyException{
+class QueueEmptyException
+{
     public:
     std::string name = "QueueEmptyException";
-    std::string what(){
+    std::string what()
+    {
         return "Excessão: " + this->name;
     }
 };
 
-class ItemNotFoundException{
+class ItemNotFoundException
+{
     public:
     std::string name = "ItemNotFoundException"; 
-    std::string what(){
+    std::string what()
+    {
         return "Excessão: " + this->name;
     }
 };
 
-class AlreadyExecuted{
+class AlreadyExecuted
+{
     public:
     std::string name = "AlreadyExecuted"; 
-    std::string what(){
+    std::string what()
+    {
         return "Excessão: " + this->name;
     }
 };
