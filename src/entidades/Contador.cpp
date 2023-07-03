@@ -9,15 +9,17 @@
  * @param _salario Salário do contador instanciado
  * @param _listaOrdens Array das ordens de serviço
  */
-Contador::Contador(std::string _nome, int _identificacao, int _idade, double _salario, std::vector<OrdemServico*> _listaOrdens)
-          : Funcionario(_nome, _identificacao, _idade, _salario){
 
+Contador::Contador(std::string _nome, int _identificacao, int _idade, double _salario, std::vector<OrdemServico*> _listaOrdens)
+          : Funcionario(_nome, _identificacao, _idade, _salario)
+{
             this->listaOrdens = _listaOrdens;
 };
 
 /**
  * @brief Destrutor da classe Contador
  */
+
 Contador::~Contador(){};
 
 /**
@@ -26,23 +28,29 @@ Contador::~Contador(){};
  * @param _valor Valor que deve ser pago pela Ordem de serviço
  * @param _dataPagamento Data que o pagamento foi efetuado
  */
-void Contador::setPagamento(int _numOrdem, double _valor, std::string _dataPagamento){
 
+void Contador::setPagamento(int _numOrdem, double _valor, std::string _dataPagamento)
+{
     bool encontrado;
     bool sucessoPagamento;
 
-    if(!this->listaOrdens.empty()){
-        for(auto it = this->listaOrdens.begin(); it != this->listaOrdens.end(); it ++){
+    if(!this->listaOrdens.empty())
+    {
+        for(auto it = this->listaOrdens.begin(); it != this->listaOrdens.end(); it ++)
+        {
             OrdemServico* aux = *it;
 
-            if(aux->getNumOrdem() == _numOrdem && !aux->ordemPaga()){
+            if(aux->getNumOrdem() == _numOrdem && !aux->ordemPaga())
+            {
                 aux->setPagamento(_valor, _dataPagamento);
                 encontrado = true;
-            } else if(aux->getNumOrdem() == _numOrdem && aux->ordemPaga()){
+            } else if(aux->getNumOrdem() == _numOrdem && aux->ordemPaga())
+            {
                 throw AlreadyExecuted();
             }  
         }
-    } else{
+    } else
+    {
         throw QueueEmptyException();
     }
 
@@ -55,24 +63,28 @@ void Contador::setPagamento(int _numOrdem, double _valor, std::string _dataPagam
  * Serviço indicada
  * @param _numOrdem Número da Ordem de Serviço que será impressa
  */
-void Contador::printStatusPagamento(int _numOrdem){
-    
+
+void Contador::printStatusPagamento(int _numOrdem)
+{   
     bool encontrado;
 
-    if(!this->listaOrdens.empty()){
-        for(auto it = this->listaOrdens.begin(); it != this->listaOrdens.end(); it ++){
+    if(!this->listaOrdens.empty())
+    {
+        for(auto it = this->listaOrdens.begin(); it != this->listaOrdens.end(); it ++)
+        {
             OrdemServico* aux = *it;
 
-            if(aux->getNumOrdem() == _numOrdem){
+            if(aux->getNumOrdem() == _numOrdem)
+            {
                 if(aux->ordemPaga())
                     std::cout << "Ordem de Serviço já teve seu contrato pago." << std::endl;
                 else
                     std::cout << "Pagamento da Ordem de Serviço ainda está pendente." << std::endl;
-
                 encontrado = true;
             }  
         }
-    } else{
+    } else
+    {
         throw QueueEmptyException();
     }
 
@@ -84,14 +96,18 @@ void Contador::printStatusPagamento(int _numOrdem){
 /**
  * @brief Imprime na tela todas as Ordens cadastradas
  */
-void Contador::printListaOS(){
 
-    if(!this->listaOrdens.empty()){
-        for(auto it = this->listaOrdens.begin(); it != this->listaOrdens.end(); it ++){
+void Contador::printListaOS()
+{
+    if(!this->listaOrdens.empty())
+    {
+        for(auto it = this->listaOrdens.begin(); it != this->listaOrdens.end(); it ++)
+        {
             OrdemServico* aux = *it;  
             aux->printTela();
         }
-    } else{
+    } else
+    {
         throw QueueEmptyException();
     }   
 };
@@ -101,13 +117,16 @@ void Contador::printListaOS(){
  * e a soma dos pagamentos pendentes
  * Serviço indicada
  */
-void Contador::printHistoricoFinanceiro(){
 
+void Contador::printHistoricoFinanceiro()
+{
     this->receitaBruta = 0;
     this->receitaPendente = 0;
 
-    if(!this->listaOrdens.empty()){
-        for(auto it = this->listaOrdens.begin(); it != this->listaOrdens.end(); it ++){
+    if(!this->listaOrdens.empty())
+    {
+        for(auto it = this->listaOrdens.begin(); it != this->listaOrdens.end(); it ++)
+        {
             OrdemServico* aux = *it;  
             
             if(aux->ordemPaga())
@@ -122,7 +141,8 @@ void Contador::printHistoricoFinanceiro(){
         std::cout << "Receita Pendente: R$" << std::fixed << std::setprecision(2) << this->receitaPendente;
         std::cout << std::endl;
 
-    } else{
+    } else
+    {
         throw QueueEmptyException();
     }     
 };
