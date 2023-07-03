@@ -12,6 +12,7 @@
  * ver quais propostas ainda não foram fechadas, bem como as que já foram, 
  * inclusive tendo um retorno quantitativo acerca do total já vendido.
  */
+
 class Orcamentista : public Funcionario
 {
   private:
