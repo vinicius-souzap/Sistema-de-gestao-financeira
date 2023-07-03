@@ -14,8 +14,9 @@
  * do projeto desejado por ele. A partir da proposta, é elaborado um orçamento
  * que, se aprovado pelo cliente, vira uma ordem se serviço.
  */
-class Proposta {
 
+class Proposta
+{
     private:
         static int const prazoPagamento = 30;
         std::string nomeCliente;
