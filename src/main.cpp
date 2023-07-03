@@ -38,3 +38,14 @@ void mostrarPropostasAberto(std::vector<Proposta*>& propostas){
     else
         throw QueueEmptyException();   
 }
+
+void mostrarOrdensServico(std::vector<OrdemServico*>& ordens){
+    
+    if(!ordens.empty())   
+        for(auto it = ordens.begin(); it != ordens.end(); it++){
+            OrdemServico* aux = *it;
+            aux->printTela();
+        }
+    else
+        throw QueueEmptyException(); 
+}
