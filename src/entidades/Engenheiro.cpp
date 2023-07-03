@@ -8,12 +8,14 @@
  * @param _idade Idade do engenheiro instanciado
  * @param _salario Salário do engenheiro instanciado
  */
+
 Engenheiro::Engenheiro(std::string _nome, int _identificacao, int _idade, double _salario)
               : Funcionario(_nome, _identificacao, _idade, _salario){};
 
 /**
  * @brief Destrutor da classe Engenheiro
  */
+
 Engenheiro::~Engenheiro(){};
 
 /**
@@ -21,8 +23,9 @@ Engenheiro::~Engenheiro(){};
  * engenheiro referenciado
  * @return Quantidade de tarefas do engenheiro
  */
-int Engenheiro::getNumTarefas(){
 
+int Engenheiro::getNumTarefas()
+{
     return this->listaTarefas.size();
 };
 
@@ -31,11 +34,14 @@ int Engenheiro::getNumTarefas(){
  * @param _ordemServico Ordem de serviço que
  * será atribuida
  */
-void Engenheiro::adicionarTarefa(OrdemServico* _ordemServico){
 
-    if(this->listaTarefas.size() == MAX_ATIVIDADES){
+void Engenheiro::adicionarTarefa(OrdemServico* _ordemServico)
+{
+    if(this->listaTarefas.size() == MAX_ATIVIDADES)
+    {
         throw QueueFullException();
-    } else{
+    } else
+    {
         this->listaTarefas.push_back(_ordemServico);
         _ordemServico->setEngenheiro(this->nome);
     }
@@ -49,25 +55,30 @@ void Engenheiro::adicionarTarefa(OrdemServico* _ordemServico){
  * @param _dataEntrega Data de finalização da 
   * ordem de serviço
  */
-void Engenheiro::encerrarTarefa(int _numOrdem, std::string _dataEntrega){
 
+void Engenheiro::encerrarTarefa(int _numOrdem, std::string _dataEntrega)
+{
     bool encontrado;
     
-    if(!this->listaTarefas.empty()){
-        for(int i = 0; i < this->listaTarefas.size(); i++){            
-            if(this->listaTarefas.at(i)->getNumOrdem() == _numOrdem && !this->listaTarefas.at(i)->getStatus()){
+    if(!this->listaTarefas.empty())
+    {
+        for(int i = 0; i < this->listaTarefas.size(); i++)
+        {            
+            if(this->listaTarefas.at(i)->getNumOrdem() == _numOrdem && !this->listaTarefas.at(i)->getStatus())
+            {
                 this->listaTarefas.at(i)->setDataEntrega(_dataEntrega);
                 this->listaTarefas.at(i)->setEngenheiro("");
                 this->listaTarefas.erase(this->listaTarefas.begin() + i);
                 encontrado = true;
-            } else if(this->listaTarefas.at(i)->getNumOrdem() == _numOrdem && this->listaTarefas.at(i)->getStatus()){
+            } else if(this->listaTarefas.at(i)->getNumOrdem() == _numOrdem && this->listaTarefas.at(i)->getStatus())
+            {
                 throw AlreadyExecuted();
             }
         }
-    } else{
+    } else
+    {
         throw QueueEmptyException();
     }
-
     if(!encontrado)
         throw ItemNotFoundException(); 
 };
@@ -75,14 +86,18 @@ void Engenheiro::encerrarTarefa(int _numOrdem, std::string _dataEntrega){
  * @brief Imprime na tela todas as tarefas atribuidas
  * ao engenheiro
  */
-void Engenheiro::printListaTarefas(){
 
-    if(!this->listaTarefas.empty()){
-        for(auto it = this->listaTarefas.begin(); it != this->listaTarefas.end(); it ++){
+void Engenheiro::printListaTarefas()
+{
+    if(!this->listaTarefas.empty())
+    {
+        for(auto it = this->listaTarefas.begin(); it != this->listaTarefas.end(); it ++)
+        {
             OrdemServico* aux = *it;  
             aux->printTela();
         }
-    } else{
+    } else
+    {
         throw QueueEmptyException();
     }   
 };
@@ -91,8 +106,9 @@ void Engenheiro::printListaTarefas(){
  * @brief Imprime na tela todas as informações
  * do engenheiro
  */
-void Engenheiro::printInfo(){
-    
+
+void Engenheiro::printInfo()
+{    
     std::cout << "Nome: " << this->nome << std::endl
               << "Idade: " << this->idade << std::endl 
               << "Nº Identificação: " << this->identificacao << std::endl
