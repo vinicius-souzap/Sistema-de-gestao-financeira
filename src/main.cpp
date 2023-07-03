@@ -19,12 +19,14 @@
 #include <unistd.h>
 #include <cstdio>
 
-#include "Proposta.hpp"
-#include "OrdemServico.hpp"
+
 #include "Funcionario.hpp"
 #include "Engenheiro.hpp"
 #include "Orcamentista.hpp"
 #include "Contador.hpp"
+#include "Proposta.hpp"
+#include "OrdemServico.hpp"
+
 /**
  * @brief printa na tela todas as propostas já cadastradas
  * @param propostas array de propostas que será percorrido 
