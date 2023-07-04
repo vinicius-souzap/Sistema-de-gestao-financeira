@@ -24,7 +24,7 @@ Nesse repositório apresentamos as histórias dos usuários do grupo com o tema 
   
  * Informar o número da proposta que gerou essa OS;
   
- * Informar seu estado (concluída, pendente, paralisada).
+ * Informar seu estado (concluída, pendente, suspensa).
   
 ### Descrição:
 
