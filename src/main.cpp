@@ -4,6 +4,7 @@
  * @version 1.0
  *
  * @section DESCRIPTION
+ 
  *
  * Este programa é um Software gratuito, com fins didáticos.
  * O objetivo é simular um sistema de gestão financeiro com
