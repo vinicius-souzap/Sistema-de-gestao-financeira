@@ -795,6 +795,7 @@ int main(){
     }
     
     Contador* ct1 = new Contador("Pedro ", 6, 40, 5000, ordensAtuais);
+ 
     
     //obtenção de dados concluida, arquivos serão fechados
     arq1.close();
@@ -849,7 +850,8 @@ int main(){
                 system("clear");
                 abrirMenuEngenheiro(engenheiros, ordensAtuais);
                 break;
-            }   
+            }
+         
             case 'd': {
                 system("clear");
                 abrirMenuContador(ct1, ordensAtuais);
@@ -863,9 +865,11 @@ int main(){
         }
         system("clear");
     }
+ 
     numOrdemAtual -= 1;
     numPropostaAtual -= 1;
-    
+
+
     //reabertura dos arquivos para operações de sobrescrita
     std::ofstream arqAux1("./database/Propostas.txt", std::ios::trunc);
     std::ofstream arqAux2("./database/Ordens.txt", std::ios::trunc);
