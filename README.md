@@ -38,4 +38,4 @@ visualizar todas as ordens cadastradas, bem como seus respectivos status de paga
 ## AUTORES
 - Nossos perfil Github:<p>
 [Paulo Eduardo](https://github.com/Paulo-Pio)</p>[João Pedro](https://github.com/joaocarvalho74)<p>
-[Vinicius Souza](https://github.com/vinicius-souzap)</p>[Maick](https://github.com/guimaraesmaickufmg)</p>[Matheus][https://github.com/Leless-dot]
+[Vinicius Souza](https://github.com/vinicius-souzap)</p>[Maick](https://github.com/guimaraesmaickufmg)</p>[Matheus](https://github.com/Leless-dot)
