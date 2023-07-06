@@ -1,0 +1,152 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.7"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sistema de gestão financeira - Trabalho Prático: Código-Fonte de include/OrdemServico.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="software-gestao-financeira.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Sistema de gestão financeira - Trabalho Prático<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Trabalho Prático</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.9.7 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Busca');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Carregando...</div>
+<div class="SRStatus" id="Searching">Procurando...</div>
+<div class="SRStatus" id="NoMatches">Nenhuma entrada encontrado</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">OrdemServico.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef ORDEM_SERVICO_H</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define ORDEM_SERVICO_H</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;Proposta.hpp&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;Engenheiro.hpp&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">class </span><a class="code hl_class" href="class_engenheiro.html">Engenheiro</a>;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="class_ordem_servico.html">   15</a></span><span class="keyword">class </span><a class="code hl_class" href="class_ordem_servico.html">OrdemServico</a> {</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        <span class="keywordtype">int</span> numOrdem;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        <a class="code hl_class" href="class_proposta.html">Proposta</a>* proposta;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        <span class="keywordtype">int</span> idProposta;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        std::string dataEntrega;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        std::string engResponsavel;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        <span class="keywordtype">bool</span> concluida;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        <a class="code hl_function" href="class_ordem_servico.html#a9ed8449ec7d904618aa9ac600cab6da4">OrdemServico</a>(<span class="keywordtype">int</span> _numOrdem, <a class="code hl_class" href="class_proposta.html">Proposta</a>* _proposta, std::string _dataAssinatura);</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        <a class="code hl_function" href="class_ordem_servico.html#a9ed8449ec7d904618aa9ac600cab6da4">OrdemServico</a>();</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        <span class="keywordtype">int</span> <a class="code hl_function" href="class_ordem_servico.html#adfb1c74397533a0ff5f2fac6d5b4c8ac">getOrdemAtual</a>();</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        <span class="keywordtype">int</span> <a class="code hl_function" href="class_ordem_servico.html#a2c7c719c26ed834a383fb9bf4846d04b">getNumOrdem</a>();</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="class_ordem_servico.html#ae0ce084b6ec1b0cc31df1a26a5348ee8">ordemPaga</a>();</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        <span class="keywordtype">double</span> <a class="code hl_function" href="class_ordem_servico.html#a539d4670a38e68696eb0be23ff6c4dd7">getValor</a>();</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_ordem_servico.html#a83bbb6a102a2bf9ecde7f8619e0649cf">setContrato</a>(<a class="code hl_class" href="class_proposta.html">Proposta</a>* _contratoFechado);</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_ordem_servico.html#a22024a2523f5ddf5e91e02d3eb9c028c">setPagamento</a>(<span class="keywordtype">double</span> _valor, std::string _dataPagamento);</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_ordem_servico.html#a1bce17adc9e055fe201137e33be07482">setDataEntrega</a>(std::string _dataEntrega);  </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_ordem_servico.html#a373c875d6cdcbe800a4e450311c36688">setEngenheiro</a>(std::string _engResponsavel);</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        <span class="keywordtype">int</span> <a class="code hl_function" href="class_ordem_servico.html#a62d1f3ea837dc096a90c9eb8f19410f7">getIdProposta</a>();</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        std::string <a class="code hl_function" href="class_ordem_servico.html#a30a9f543963d8481d6a8d54bfaf596a9">getDataEntrega</a>();</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        std::string <a class="code hl_function" href="class_ordem_servico.html#af88878d67b37e3e4a68ebc753d65167c">getNomeEngenheiro</a>();</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="class_ordem_servico.html#a95fa81f0361d24b90952dcfefd0c5b0b">getStatus</a>();</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_ordem_servico.html#a80ac566abd36ab6da1b7b0b49d2ac18e">printTela</a>();</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_ordem_servico.html#a8c24b96fcd0858fa5b5a20ce9a2c6124">printArquivo</a>(std::ostream&amp; out);</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_ordem_servico.html#acb59965aed12bc6e2c04dcc5640d9e74">lerArquivo</a>(std::istream&amp; in);</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        <span class="keyword">friend</span> std::ostream&amp; <a class="code hl_friend" href="class_ordem_servico.html#a0bcfb3f3097788e5f7d887765b409f37">operator&lt;&lt;</a>(std::ostream&amp; out, <a class="code hl_class" href="class_ordem_servico.html">OrdemServico</a>&amp; oS);</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        <span class="keyword">friend</span> std::istream&amp; <a class="code hl_friend" href="class_ordem_servico.html#aa6bb97910e9b561d984dc3b45098525d">operator&gt;&gt;</a>(std::istream&amp; in, <a class="code hl_class" href="class_ordem_servico.html">OrdemServico</a>&amp; oS);</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>};</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aclass_engenheiro_html"><div class="ttname"><a href="class_engenheiro.html">Engenheiro</a></div><div class="ttdoc">Classe responsável por executar uma ordem de serviço. Além de realizá-la, o Engenheiro é responsável ...</div><div class="ttdef"><b>Definição</b> Engenheiro.hpp:17</div></div>
+<div class="ttc" id="aclass_ordem_servico_html"><div class="ttname"><a href="class_ordem_servico.html">OrdemServico</a></div><div class="ttdoc">Quando uma proposta é fechada, ou seja, o cliente deu a confirmação de que deseja trabalhar com a emp...</div><div class="ttdef"><b>Definição</b> OrdemServico.hpp:15</div></div>
+<div class="ttc" id="aclass_ordem_servico_html_a0bcfb3f3097788e5f7d887765b409f37"><div class="ttname"><a href="class_ordem_servico.html#a0bcfb3f3097788e5f7d887765b409f37">OrdemServico::operator&lt;&lt;</a></div><div class="ttdeci">friend std::ostream &amp; operator&lt;&lt;(std::ostream &amp;out, OrdemServico &amp;oS)</div><div class="ttdoc">Sobrecarrega operador &lt;&lt; para ler objeto do tipo OrdemServico no arquivo texto.</div><div class="ttdef"><b>Definição</b> OrdemServico.cpp:199</div></div>
+<div class="ttc" id="aclass_ordem_servico_html_a1bce17adc9e055fe201137e33be07482"><div class="ttname"><a href="class_ordem_servico.html#a1bce17adc9e055fe201137e33be07482">OrdemServico::setDataEntrega</a></div><div class="ttdeci">void setDataEntrega(std::string _dataEntrega)</div><div class="ttdoc">Atualiza data da entrega da ordem de serviço.</div><div class="ttdef"><b>Definição</b> OrdemServico.cpp:97</div></div>
+<div class="ttc" id="aclass_ordem_servico_html_a22024a2523f5ddf5e91e02d3eb9c028c"><div class="ttname"><a href="class_ordem_servico.html#a22024a2523f5ddf5e91e02d3eb9c028c">OrdemServico::setPagamento</a></div><div class="ttdeci">void setPagamento(double _valor, std::string _dataPagamento)</div><div class="ttdoc">Atualiza informações de pagamento do contrato.</div><div class="ttdef"><b>Definição</b> OrdemServico.cpp:86</div></div>
+<div class="ttc" id="aclass_ordem_servico_html_a2c7c719c26ed834a383fb9bf4846d04b"><div class="ttname"><a href="class_ordem_servico.html#a2c7c719c26ed834a383fb9bf4846d04b">OrdemServico::getNumOrdem</a></div><div class="ttdeci">int getNumOrdem()</div><div class="ttdoc">Retorna número da ordem de serviço.</div><div class="ttdef"><b>Definição</b> OrdemServico.cpp:45</div></div>
+<div class="ttc" id="aclass_ordem_servico_html_a30a9f543963d8481d6a8d54bfaf596a9"><div class="ttname"><a href="class_ordem_servico.html#a30a9f543963d8481d6a8d54bfaf596a9">OrdemServico::getDataEntrega</a></div><div class="ttdeci">std::string getDataEntrega()</div><div class="ttdoc">Retorna data de entrega da ordem.</div><div class="ttdef"><b>Definição</b> OrdemServico.cpp:125</div></div>
+<div class="ttc" id="aclass_ordem_servico_html_a373c875d6cdcbe800a4e450311c36688"><div class="ttname"><a href="class_ordem_servico.html#a373c875d6cdcbe800a4e450311c36688">OrdemServico::setEngenheiro</a></div><div class="ttdeci">void setEngenheiro(std::string _engResponsavel)</div><div class="ttdoc">Atribui engenheiro a ordem de serviço.</div><div class="ttdef"><b>Definição</b> OrdemServico.cpp:107</div></div>
+<div class="ttc" id="aclass_ordem_servico_html_a539d4670a38e68696eb0be23ff6c4dd7"><div class="ttname"><a href="class_ordem_servico.html#a539d4670a38e68696eb0be23ff6c4dd7">OrdemServico::getValor</a></div><div class="ttdeci">double getValor()</div><div class="ttdoc">Retorna valor da Proposta.</div><div class="ttdef"><b>Definição</b> OrdemServico.cpp:63</div></div>
+<div class="ttc" id="aclass_ordem_servico_html_a62d1f3ea837dc096a90c9eb8f19410f7"><div class="ttname"><a href="class_ordem_servico.html#a62d1f3ea837dc096a90c9eb8f19410f7">OrdemServico::getIdProposta</a></div><div class="ttdeci">int getIdProposta()</div><div class="ttdoc">Retorna Id da Proposta.</div><div class="ttdef"><b>Definição</b> OrdemServico.cpp:116</div></div>
+<div class="ttc" id="aclass_ordem_servico_html_a80ac566abd36ab6da1b7b0b49d2ac18e"><div class="ttname"><a href="class_ordem_servico.html#a80ac566abd36ab6da1b7b0b49d2ac18e">OrdemServico::printTela</a></div><div class="ttdeci">void printTela()</div><div class="ttdoc">Imprime na tela as informações de todas as ordens de serviço.</div><div class="ttdef"><b>Definição</b> OrdemServico.cpp:152</div></div>
+<div class="ttc" id="aclass_ordem_servico_html_a83bbb6a102a2bf9ecde7f8619e0649cf"><div class="ttname"><a href="class_ordem_servico.html#a83bbb6a102a2bf9ecde7f8619e0649cf">OrdemServico::setContrato</a></div><div class="ttdeci">void setContrato(Proposta *_contratoFechado)</div><div class="ttdoc">Atualiza proposta fechada tornando-a um contrato.</div><div class="ttdef"><b>Definição</b> OrdemServico.cpp:73</div></div>
+<div class="ttc" id="aclass_ordem_servico_html_a8c24b96fcd0858fa5b5a20ce9a2c6124"><div class="ttname"><a href="class_ordem_servico.html#a8c24b96fcd0858fa5b5a20ce9a2c6124">OrdemServico::printArquivo</a></div><div class="ttdeci">void printArquivo(std::ostream &amp;out)</div><div class="ttdoc">Imprime arquivo texto.</div><div class="ttdef"><b>Definição</b> OrdemServico.cpp:170</div></div>
+<div class="ttc" id="aclass_ordem_servico_html_a95fa81f0361d24b90952dcfefd0c5b0b"><div class="ttname"><a href="class_ordem_servico.html#a95fa81f0361d24b90952dcfefd0c5b0b">OrdemServico::getStatus</a></div><div class="ttdeci">bool getStatus()</div><div class="ttdoc">Retorna status da ordem.</div><div class="ttdef"><b>Definição</b> OrdemServico.cpp:143</div></div>
+<div class="ttc" id="aclass_ordem_servico_html_a9ed8449ec7d904618aa9ac600cab6da4"><div class="ttname"><a href="class_ordem_servico.html#a9ed8449ec7d904618aa9ac600cab6da4">OrdemServico::OrdemServico</a></div><div class="ttdeci">OrdemServico()</div><div class="ttdoc">Construtor responsável por instanciar as ordens lidas no arquivo texto.</div><div class="ttdef"><b>Definição</b> OrdemServico.cpp:7</div></div>
+<div class="ttc" id="aclass_ordem_servico_html_aa6bb97910e9b561d984dc3b45098525d"><div class="ttname"><a href="class_ordem_servico.html#aa6bb97910e9b561d984dc3b45098525d">OrdemServico::operator&gt;&gt;</a></div><div class="ttdeci">friend std::istream &amp; operator&gt;&gt;(std::istream &amp;in, OrdemServico &amp;oS)</div><div class="ttdoc">Sobrecarrega operador &gt;&gt; para enviar informações do objeto para o arquivo texto.</div><div class="ttdef"><b>Definição</b> OrdemServico.cpp:212</div></div>
+<div class="ttc" id="aclass_ordem_servico_html_acb59965aed12bc6e2c04dcc5640d9e74"><div class="ttname"><a href="class_ordem_servico.html#acb59965aed12bc6e2c04dcc5640d9e74">OrdemServico::lerArquivo</a></div><div class="ttdeci">void lerArquivo(std::istream &amp;in)</div><div class="ttdoc">Lê arquivo texto.</div><div class="ttdef"><b>Definição</b> OrdemServico.cpp:183</div></div>
+<div class="ttc" id="aclass_ordem_servico_html_adfb1c74397533a0ff5f2fac6d5b4c8ac"><div class="ttname"><a href="class_ordem_servico.html#adfb1c74397533a0ff5f2fac6d5b4c8ac">OrdemServico::getOrdemAtual</a></div><div class="ttdeci">int getOrdemAtual()</div><div class="ttdoc">Verifica o número da última ordem de de serviço e retorna o número que a próxima ordem deve ser ident...</div><div class="ttdef"><b>Definição</b> OrdemServico.cpp:36</div></div>
+<div class="ttc" id="aclass_ordem_servico_html_ae0ce084b6ec1b0cc31df1a26a5348ee8"><div class="ttname"><a href="class_ordem_servico.html#ae0ce084b6ec1b0cc31df1a26a5348ee8">OrdemServico::ordemPaga</a></div><div class="ttdeci">bool ordemPaga()</div><div class="ttdoc">Verifica se a proposta foi paga.</div><div class="ttdef"><b>Definição</b> OrdemServico.cpp:54</div></div>
+<div class="ttc" id="aclass_ordem_servico_html_af88878d67b37e3e4a68ebc753d65167c"><div class="ttname"><a href="class_ordem_servico.html#af88878d67b37e3e4a68ebc753d65167c">OrdemServico::getNomeEngenheiro</a></div><div class="ttdeci">std::string getNomeEngenheiro()</div><div class="ttdoc">Retorna nome do engenheiro.</div><div class="ttdef"><b>Definição</b> OrdemServico.cpp:134</div></div>
+<div class="ttc" id="aclass_proposta_html"><div class="ttname"><a href="class_proposta.html">Proposta</a></div><div class="ttdoc">Classe responsável por representar todas as propostas recebidas pela empresa. Nela possui informações...</div><div class="ttdef"><b>Definição</b> Proposta.hpp:17</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.7
+</small></address>
+</body>
+</html>
