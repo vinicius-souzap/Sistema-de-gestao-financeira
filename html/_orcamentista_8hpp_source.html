@@ -1,0 +1,127 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.7"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sistema de gestão financeira - Trabalho Prático: Código-Fonte de include/Orcamentista.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="software-gestao-financeira.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Sistema de gestão financeira - Trabalho Prático<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Trabalho Prático</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.9.7 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Busca');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Carregando...</div>
+<div class="SRStatus" id="Searching">Procurando...</div>
+<div class="SRStatus" id="NoMatches">Nenhuma entrada encontrado</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">Orcamentista.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef ORCAMENTISTA_H</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define ORCAMENTISTA_H</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;Funcionario.hpp&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;Proposta.hpp&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;Exceptions.hpp&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="class_orcamentista.html">   15</a></span><span class="keyword">class </span><a class="code hl_class" href="class_orcamentista.html">Orcamentista</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_funcionario.html">Funcionario</a></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>{</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        std::vector&lt;Proposta*&gt; listaPropostas;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        <span class="keywordtype">double</span> totalFechado;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        <span class="keywordtype">double</span> meta;       </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        <a class="code hl_class" href="class_orcamentista.html">Orcamentista</a>(std::string _nome, <span class="keywordtype">int</span> _identificacao, <span class="keywordtype">int</span> _idade, <span class="keywordtype">double</span> _salario, <span class="keywordtype">double</span> _meta);</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        <span class="keyword">virtual</span> <a class="code hl_function" href="class_orcamentista.html#a8630b2a913970f615de83e0865578ce8">~Orcamentista</a>();</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        <span class="keywordtype">double</span> <a class="code hl_function" href="class_orcamentista.html#adc9fa309248335096a2a06c85d21840a">getTotalFechado</a>();</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        <span class="keywordtype">double</span> <a class="code hl_function" href="class_orcamentista.html#a5efb72e803c4dc42e61fe24416e52808">getMeta</a>();</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        <span class="keywordtype">double</span> metaAlcancada();</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_orcamentista.html#a0ed61f37e828a133e398e8d096ffd672">adicionarProposta</a>(<a class="code hl_class" href="class_proposta.html">Proposta</a>* _proposta);</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_orcamentista.html#aee674940a440c00ecec50754c3434b62">imprimirPropostasAbertas</a>();</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_orcamentista.html#a81304369cd1ae4572f0f90209c03cda8">imprimirPropostasFechadas</a>();</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_orcamentista.html#a784380110314b55098270d189024bf85">progressoMeta</a>();</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_orcamentista.html#ab8ed250bfb074cfb7ad6f3e0d83345c1">printInfo</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>};</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aclass_funcionario_html"><div class="ttname"><a href="class_funcionario.html">Funcionario</a></div><div class="ttdoc">Classe criada para reunir as características semelhantes das classes Contadores, Orçamentistas e Enge...</div><div class="ttdef"><b>Definição</b> Funcionario.hpp:16</div></div>
+<div class="ttc" id="aclass_orcamentista_html"><div class="ttname"><a href="class_orcamentista.html">Orcamentista</a></div><div class="ttdoc">Orçamentista é uma classe filha de funcionário, sendo responsável pela manipulação das propostas da e...</div><div class="ttdef"><b>Definição</b> Orcamentista.hpp:16</div></div>
+<div class="ttc" id="aclass_orcamentista_html_a0ed61f37e828a133e398e8d096ffd672"><div class="ttname"><a href="class_orcamentista.html#a0ed61f37e828a133e398e8d096ffd672">Orcamentista::adicionarProposta</a></div><div class="ttdeci">void adicionarProposta(Proposta *_proposta)</div><div class="ttdoc">Atribui nova proposta ao orçamentista.</div><div class="ttdef"><b>Definição</b> Orcamentista.cpp:58</div></div>
+<div class="ttc" id="aclass_orcamentista_html_a5efb72e803c4dc42e61fe24416e52808"><div class="ttname"><a href="class_orcamentista.html#a5efb72e803c4dc42e61fe24416e52808">Orcamentista::getMeta</a></div><div class="ttdeci">double getMeta()</div><div class="ttdoc">Retorna meta do orçamentista indicado.</div><div class="ttdef"><b>Definição</b> Orcamentista.cpp:49</div></div>
+<div class="ttc" id="aclass_orcamentista_html_a784380110314b55098270d189024bf85"><div class="ttname"><a href="class_orcamentista.html#a784380110314b55098270d189024bf85">Orcamentista::progressoMeta</a></div><div class="ttdeci">void progressoMeta()</div><div class="ttdoc">Calcula e imprime o rendimento do orçamentista de acordo com sua meta.</div><div class="ttdef"><b>Definição</b> Orcamentista.cpp:104</div></div>
+<div class="ttc" id="aclass_orcamentista_html_a81304369cd1ae4572f0f90209c03cda8"><div class="ttname"><a href="class_orcamentista.html#a81304369cd1ae4572f0f90209c03cda8">Orcamentista::imprimirPropostasFechadas</a></div><div class="ttdeci">void imprimirPropostasFechadas()</div><div class="ttdoc">Imprime na tela todas as propostas que viraram contrato.</div><div class="ttdef"><b>Definição</b> Orcamentista.cpp:86</div></div>
+<div class="ttc" id="aclass_orcamentista_html_a8630b2a913970f615de83e0865578ce8"><div class="ttname"><a href="class_orcamentista.html#a8630b2a913970f615de83e0865578ce8">Orcamentista::~Orcamentista</a></div><div class="ttdeci">virtual ~Orcamentista()</div><div class="ttdoc">Destrutor da classe Orcamentista.</div><div class="ttdef"><b>Definição</b> Orcamentista.cpp:21</div></div>
+<div class="ttc" id="aclass_orcamentista_html_ab8ed250bfb074cfb7ad6f3e0d83345c1"><div class="ttname"><a href="class_orcamentista.html#ab8ed250bfb074cfb7ad6f3e0d83345c1">Orcamentista::printInfo</a></div><div class="ttdeci">virtual void printInfo() override</div><div class="ttdoc">Imprime na tela todas as informações do orçamentista.</div><div class="ttdef"><b>Definição</b> Orcamentista.cpp:121</div></div>
+<div class="ttc" id="aclass_orcamentista_html_adc9fa309248335096a2a06c85d21840a"><div class="ttname"><a href="class_orcamentista.html#adc9fa309248335096a2a06c85d21840a">Orcamentista::getTotalFechado</a></div><div class="ttdeci">double getTotalFechado()</div><div class="ttdoc">Soma totas as propostas do orçamentista que viraram contrato.</div><div class="ttdef"><b>Definição</b> Orcamentista.cpp:28</div></div>
+<div class="ttc" id="aclass_orcamentista_html_aee674940a440c00ecec50754c3434b62"><div class="ttname"><a href="class_orcamentista.html#aee674940a440c00ecec50754c3434b62">Orcamentista::imprimirPropostasAbertas</a></div><div class="ttdeci">void imprimirPropostasAbertas()</div><div class="ttdoc">Imprime na tela todas as propostas em aberto.</div><div class="ttdef"><b>Definição</b> Orcamentista.cpp:68</div></div>
+<div class="ttc" id="aclass_proposta_html"><div class="ttname"><a href="class_proposta.html">Proposta</a></div><div class="ttdoc">Classe responsável por representar todas as propostas recebidas pela empresa. Nela possui informações...</div><div class="ttdef"><b>Definição</b> Proposta.hpp:17</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.7
+</small></address>
+</body>
+</html>
