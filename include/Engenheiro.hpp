@@ -19,7 +19,7 @@ class Engenheiro : public Funcionario
     private:
         static const int MAX_ATIVIDADES = 2;
         std::vector<OrdemServico*> listaTarefas;       
-     
+
     public:
         Engenheiro(std::string _nome, int _identificacao, int _idade, double _salario);
         virtual ~Engenheiro();
