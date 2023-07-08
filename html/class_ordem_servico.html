@@ -1,0 +1,779 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.7"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sistema de gestão financeira - Trabalho Prático: Referência da Classe OrdemServico</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="software-gestao-financeira.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Sistema de gestão financeira - Trabalho Prático<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Trabalho Prático</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.9.7 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Busca');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Carregando...</div>
+<div class="SRStatus" id="Searching">Procurando...</div>
+<div class="SRStatus" id="NoMatches">Nenhuma entrada encontrado</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Membros Públicos</a> &#124;
+<a href="#friends">Amigos</a> &#124;
+<a href="class_ordem_servico-members.html">Lista de todos os Membros</a>  </div>
+  <div class="headertitle"><div class="title">Referência da Classe OrdemServico</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Quando uma proposta é fechada, ou seja, o cliente deu a confirmação de que deseja trabalhar com a empresa, cria-se então uma Ordem de Serviço. Dessa forma, ela possui uma proposta vinculada. Por isso utilizamos composição entre essas classes. Além disso, possui também um engenheiro responsável por ela, que é quem irá gerenciar seu status de execução.  
+ <a href="class_ordem_servico.html#details">Mais...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_ordem_servico_8hpp_source.html">OrdemServico.hpp</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Membros Públicos</h2></td></tr>
+<tr class="memitem:a81edef72a7cc9628ca0b3410885c3359"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ordem_servico.html#a81edef72a7cc9628ca0b3410885c3359">OrdemServico</a> (int _numOrdem, <a class="el" href="class_proposta.html">Proposta</a> *_proposta, std::string _dataAssinatura)</td></tr>
+<tr class="memdesc:a81edef72a7cc9628ca0b3410885c3359"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construtor da classe <a class="el" href="class_ordem_servico.html" title="Quando uma proposta é fechada, ou seja, o cliente deu a confirmação de que deseja trabalhar com a emp...">OrdemServico</a>.  <br /></td></tr>
+<tr class="separator:a81edef72a7cc9628ca0b3410885c3359"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ed8449ec7d904618aa9ac600cab6da4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ordem_servico.html#a9ed8449ec7d904618aa9ac600cab6da4">OrdemServico</a> ()</td></tr>
+<tr class="memdesc:a9ed8449ec7d904618aa9ac600cab6da4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construtor responsável por instanciar as ordens lidas no arquivo texto.  <br /></td></tr>
+<tr class="separator:a9ed8449ec7d904618aa9ac600cab6da4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adfb1c74397533a0ff5f2fac6d5b4c8ac"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ordem_servico.html#adfb1c74397533a0ff5f2fac6d5b4c8ac">getOrdemAtual</a> ()</td></tr>
+<tr class="memdesc:adfb1c74397533a0ff5f2fac6d5b4c8ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verifica o número da última ordem de de serviço e retorna o número que a próxima ordem deve ser identificada.  <br /></td></tr>
+<tr class="separator:adfb1c74397533a0ff5f2fac6d5b4c8ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c7c719c26ed834a383fb9bf4846d04b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ordem_servico.html#a2c7c719c26ed834a383fb9bf4846d04b">getNumOrdem</a> ()</td></tr>
+<tr class="memdesc:a2c7c719c26ed834a383fb9bf4846d04b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna número da ordem de serviço.  <br /></td></tr>
+<tr class="separator:a2c7c719c26ed834a383fb9bf4846d04b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0ce084b6ec1b0cc31df1a26a5348ee8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ordem_servico.html#ae0ce084b6ec1b0cc31df1a26a5348ee8">ordemPaga</a> ()</td></tr>
+<tr class="memdesc:ae0ce084b6ec1b0cc31df1a26a5348ee8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verifica se a proposta foi paga.  <br /></td></tr>
+<tr class="separator:ae0ce084b6ec1b0cc31df1a26a5348ee8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a539d4670a38e68696eb0be23ff6c4dd7"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ordem_servico.html#a539d4670a38e68696eb0be23ff6c4dd7">getValor</a> ()</td></tr>
+<tr class="memdesc:a539d4670a38e68696eb0be23ff6c4dd7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna valor da <a class="el" href="class_proposta.html" title="Classe responsável por representar todas as propostas recebidas pela empresa. Nela possui informações...">Proposta</a>.  <br /></td></tr>
+<tr class="separator:a539d4670a38e68696eb0be23ff6c4dd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a83bbb6a102a2bf9ecde7f8619e0649cf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ordem_servico.html#a83bbb6a102a2bf9ecde7f8619e0649cf">setContrato</a> (<a class="el" href="class_proposta.html">Proposta</a> *_contratoFechado)</td></tr>
+<tr class="memdesc:a83bbb6a102a2bf9ecde7f8619e0649cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Atualiza proposta fechada tornando-a um contrato.  <br /></td></tr>
+<tr class="separator:a83bbb6a102a2bf9ecde7f8619e0649cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22024a2523f5ddf5e91e02d3eb9c028c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ordem_servico.html#a22024a2523f5ddf5e91e02d3eb9c028c">setPagamento</a> (double _valor, std::string _dataPagamento)</td></tr>
+<tr class="memdesc:a22024a2523f5ddf5e91e02d3eb9c028c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Atualiza informações de pagamento do contrato.  <br /></td></tr>
+<tr class="separator:a22024a2523f5ddf5e91e02d3eb9c028c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1bce17adc9e055fe201137e33be07482"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ordem_servico.html#a1bce17adc9e055fe201137e33be07482">setDataEntrega</a> (std::string _dataEntrega)</td></tr>
+<tr class="memdesc:a1bce17adc9e055fe201137e33be07482"><td class="mdescLeft">&#160;</td><td class="mdescRight">Atualiza data da entrega da ordem de serviço.  <br /></td></tr>
+<tr class="separator:a1bce17adc9e055fe201137e33be07482"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a373c875d6cdcbe800a4e450311c36688"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ordem_servico.html#a373c875d6cdcbe800a4e450311c36688">setEngenheiro</a> (std::string _engResponsavel)</td></tr>
+<tr class="memdesc:a373c875d6cdcbe800a4e450311c36688"><td class="mdescLeft">&#160;</td><td class="mdescRight">Atribui engenheiro a ordem de serviço.  <br /></td></tr>
+<tr class="separator:a373c875d6cdcbe800a4e450311c36688"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62d1f3ea837dc096a90c9eb8f19410f7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ordem_servico.html#a62d1f3ea837dc096a90c9eb8f19410f7">getIdProposta</a> ()</td></tr>
+<tr class="memdesc:a62d1f3ea837dc096a90c9eb8f19410f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna Id da <a class="el" href="class_proposta.html" title="Classe responsável por representar todas as propostas recebidas pela empresa. Nela possui informações...">Proposta</a>.  <br /></td></tr>
+<tr class="separator:a62d1f3ea837dc096a90c9eb8f19410f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30a9f543963d8481d6a8d54bfaf596a9"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ordem_servico.html#a30a9f543963d8481d6a8d54bfaf596a9">getDataEntrega</a> ()</td></tr>
+<tr class="memdesc:a30a9f543963d8481d6a8d54bfaf596a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna data de entrega da ordem.  <br /></td></tr>
+<tr class="separator:a30a9f543963d8481d6a8d54bfaf596a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af88878d67b37e3e4a68ebc753d65167c"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ordem_servico.html#af88878d67b37e3e4a68ebc753d65167c">getNomeEngenheiro</a> ()</td></tr>
+<tr class="memdesc:af88878d67b37e3e4a68ebc753d65167c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna nome do engenheiro.  <br /></td></tr>
+<tr class="separator:af88878d67b37e3e4a68ebc753d65167c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95fa81f0361d24b90952dcfefd0c5b0b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ordem_servico.html#a95fa81f0361d24b90952dcfefd0c5b0b">getStatus</a> ()</td></tr>
+<tr class="memdesc:a95fa81f0361d24b90952dcfefd0c5b0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna status da ordem.  <br /></td></tr>
+<tr class="separator:a95fa81f0361d24b90952dcfefd0c5b0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80ac566abd36ab6da1b7b0b49d2ac18e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ordem_servico.html#a80ac566abd36ab6da1b7b0b49d2ac18e">printTela</a> ()</td></tr>
+<tr class="memdesc:a80ac566abd36ab6da1b7b0b49d2ac18e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Imprime na tela as informações de todas as ordens de serviço.  <br /></td></tr>
+<tr class="separator:a80ac566abd36ab6da1b7b0b49d2ac18e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c24b96fcd0858fa5b5a20ce9a2c6124"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ordem_servico.html#a8c24b96fcd0858fa5b5a20ce9a2c6124">printArquivo</a> (std::ostream &amp;out)</td></tr>
+<tr class="memdesc:a8c24b96fcd0858fa5b5a20ce9a2c6124"><td class="mdescLeft">&#160;</td><td class="mdescRight">Imprime arquivo texto.  <br /></td></tr>
+<tr class="separator:a8c24b96fcd0858fa5b5a20ce9a2c6124"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb59965aed12bc6e2c04dcc5640d9e74"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ordem_servico.html#acb59965aed12bc6e2c04dcc5640d9e74">lerArquivo</a> (std::istream &amp;in)</td></tr>
+<tr class="memdesc:acb59965aed12bc6e2c04dcc5640d9e74"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lê arquivo texto.  <br /></td></tr>
+<tr class="separator:acb59965aed12bc6e2c04dcc5640d9e74"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="friends" name="friends"></a>
+Amigos</h2></td></tr>
+<tr class="memitem:a0bcfb3f3097788e5f7d887765b409f37"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ordem_servico.html#a0bcfb3f3097788e5f7d887765b409f37">operator&lt;&lt;</a> (std::ostream &amp;out, <a class="el" href="class_ordem_servico.html">OrdemServico</a> &amp;oS)</td></tr>
+<tr class="memdesc:a0bcfb3f3097788e5f7d887765b409f37"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sobrecarrega operador &lt;&lt; para ler objeto do tipo <a class="el" href="class_ordem_servico.html" title="Quando uma proposta é fechada, ou seja, o cliente deu a confirmação de que deseja trabalhar com a emp...">OrdemServico</a> no arquivo texto.  <br /></td></tr>
+<tr class="separator:a0bcfb3f3097788e5f7d887765b409f37"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6bb97910e9b561d984dc3b45098525d"><td class="memItemLeft" align="right" valign="top">std::istream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ordem_servico.html#aa6bb97910e9b561d984dc3b45098525d">operator&gt;&gt;</a> (std::istream &amp;in, <a class="el" href="class_ordem_servico.html">OrdemServico</a> &amp;oS)</td></tr>
+<tr class="memdesc:aa6bb97910e9b561d984dc3b45098525d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sobrecarrega operador &gt;&gt; para enviar informações do objeto para o arquivo texto.  <br /></td></tr>
+<tr class="separator:aa6bb97910e9b561d984dc3b45098525d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Descrição detalhada</h2>
+<div class="textblock"><p>Quando uma proposta é fechada, ou seja, o cliente deu a confirmação de que deseja trabalhar com a empresa, cria-se então uma Ordem de Serviço. Dessa forma, ela possui uma proposta vinculada. Por isso utilizamos composição entre essas classes. Além disso, possui também um engenheiro responsável por ela, que é quem irá gerenciar seu status de execução. </p>
+</div><h2 class="groupheader">Construtores e Destrutores</h2>
+<a id="a81edef72a7cc9628ca0b3410885c3359" name="a81edef72a7cc9628ca0b3410885c3359"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a81edef72a7cc9628ca0b3410885c3359">&#9670;&#160;</a></span>OrdemServico() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">OrdemServico::OrdemServico </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>_numOrdem</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_proposta.html">Proposta</a> *&#160;</td>
+          <td class="paramname"><em>_proposta</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>_dataAssinatura</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Construtor da classe <a class="el" href="class_ordem_servico.html" title="Quando uma proposta é fechada, ou seja, o cliente deu a confirmação de que deseja trabalhar com a emp...">OrdemServico</a>. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">_numOrdem</td><td>Número da ordem instanciada </td></tr>
+    <tr><td class="paramname">_proposta</td><td><a class="el" href="class_proposta.html" title="Classe responsável por representar todas as propostas recebidas pela empresa. Nela possui informações...">Proposta</a> fechada que irá se se tornar uma ordem de serviço </td></tr>
+    <tr><td class="paramname">_dataAssinatura</td><td>Data que a proposta foi assinada </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><span class="lineno">   19</span>                                                                                         {</div>
+<div class="line"><span class="lineno">   20</span> </div>
+<div class="line"><span class="lineno">   21</span>    this-&gt;numOrdem = _numOrdem;</div>
+<div class="line"><span class="lineno">   22</span>    _proposta-&gt;<a class="code hl_function" href="class_proposta.html#abb61e7a7838e42be88a3e36b42900022">setContratoFechado</a>();</div>
+<div class="line"><span class="lineno">   23</span>    _proposta-&gt;<a class="code hl_function" href="class_proposta.html#acce976df0b647f1bae3c5036dffbfb5e">setDataAssinatura</a>(_dataAssinatura);</div>
+<div class="line"><span class="lineno">   24</span>    _proposta-&gt;<a class="code hl_function" href="class_proposta.html#a9a3cd3d9294d5638dde8a3cd220becef">setPrevisaoPagamento</a>(_dataAssinatura);</div>
+<div class="line"><span class="lineno">   25</span>    this-&gt;proposta = _proposta;</div>
+<div class="line"><span class="lineno">   26</span>    this-&gt;idProposta = this-&gt;proposta-&gt;<a class="code hl_function" href="class_proposta.html#afc10bdf9c02295f0e780a851151ad74c">getNumProposta</a>();</div>
+<div class="line"><span class="lineno">   27</span>    this-&gt;concluida = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   28</span>}</div>
+<div class="ttc" id="aclass_proposta_html_a9a3cd3d9294d5638dde8a3cd220becef"><div class="ttname"><a href="class_proposta.html#a9a3cd3d9294d5638dde8a3cd220becef">Proposta::setPrevisaoPagamento</a></div><div class="ttdeci">void setPrevisaoPagamento(std::string _dataPagamento)</div><div class="ttdoc">Calcula previsão de pagamento do contrato; Sempre irá somar 30 dias após a data de assinatura.</div><div class="ttdef"><b>Definição</b> Proposta.cpp:178</div></div>
+<div class="ttc" id="aclass_proposta_html_abb61e7a7838e42be88a3e36b42900022"><div class="ttname"><a href="class_proposta.html#abb61e7a7838e42be88a3e36b42900022">Proposta::setContratoFechado</a></div><div class="ttdeci">void setContratoFechado()</div><div class="ttdoc">Verifica se o contrato foi fechado.</div><div class="ttdef"><b>Definição</b> Proposta.cpp:119</div></div>
+<div class="ttc" id="aclass_proposta_html_acce976df0b647f1bae3c5036dffbfb5e"><div class="ttname"><a href="class_proposta.html#acce976df0b647f1bae3c5036dffbfb5e">Proposta::setDataAssinatura</a></div><div class="ttdeci">void setDataAssinatura(std::string _dataAssinatura)</div><div class="ttdoc">Atribui data de assinatura ao contrato.</div><div class="ttdef"><b>Definição</b> Proposta.cpp:167</div></div>
+<div class="ttc" id="aclass_proposta_html_afc10bdf9c02295f0e780a851151ad74c"><div class="ttname"><a href="class_proposta.html#afc10bdf9c02295f0e780a851151ad74c">Proposta::getNumProposta</a></div><div class="ttdeci">int getNumProposta()</div><div class="ttdoc">Retorna número da proposta.</div><div class="ttdef"><b>Definição</b> Proposta.cpp:80</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a9ed8449ec7d904618aa9ac600cab6da4" name="a9ed8449ec7d904618aa9ac600cab6da4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ed8449ec7d904618aa9ac600cab6da4">&#9670;&#160;</a></span>OrdemServico() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">OrdemServico::OrdemServico </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Construtor responsável por instanciar as ordens lidas no arquivo texto. </p>
+<div class="fragment"><div class="line"><span class="lineno">    7</span>                           {</div>
+<div class="line"><span class="lineno">    8</span>    </div>
+<div class="line"><span class="lineno">    9</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Documentação das funções</h2>
+<a id="a30a9f543963d8481d6a8d54bfaf596a9" name="a30a9f543963d8481d6a8d54bfaf596a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a30a9f543963d8481d6a8d54bfaf596a9">&#9670;&#160;</a></span>getDataEntrega()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string OrdemServico::getDataEntrega </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retorna data de entrega da ordem. </p>
+<dl class="section return"><dt>Retorna</dt><dd>Data de entrega </dd></dl>
+<div class="fragment"><div class="line"><span class="lineno">  125</span>                                       {</div>
+<div class="line"><span class="lineno">  126</span>    </div>
+<div class="line"><span class="lineno">  127</span>    <span class="keywordflow">return</span> this-&gt;dataEntrega;</div>
+<div class="line"><span class="lineno">  128</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a62d1f3ea837dc096a90c9eb8f19410f7" name="a62d1f3ea837dc096a90c9eb8f19410f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a62d1f3ea837dc096a90c9eb8f19410f7">&#9670;&#160;</a></span>getIdProposta()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int OrdemServico::getIdProposta </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retorna Id da <a class="el" href="class_proposta.html" title="Classe responsável por representar todas as propostas recebidas pela empresa. Nela possui informações...">Proposta</a>. </p>
+<dl class="section return"><dt>Retorna</dt><dd>Identificação da <a class="el" href="class_proposta.html" title="Classe responsável por representar todas as propostas recebidas pela empresa. Nela possui informações...">Proposta</a> </dd></dl>
+<div class="fragment"><div class="line"><span class="lineno">  116</span>                                {</div>
+<div class="line"><span class="lineno">  117</span>    </div>
+<div class="line"><span class="lineno">  118</span>    <span class="keywordflow">return</span> this-&gt;idProposta;</div>
+<div class="line"><span class="lineno">  119</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="af88878d67b37e3e4a68ebc753d65167c" name="af88878d67b37e3e4a68ebc753d65167c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af88878d67b37e3e4a68ebc753d65167c">&#9670;&#160;</a></span>getNomeEngenheiro()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string OrdemServico::getNomeEngenheiro </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retorna nome do engenheiro. </p>
+<dl class="section return"><dt>Retorna</dt><dd><a class="el" href="class_engenheiro.html" title="Classe responsável por executar uma ordem de serviço. Além de realizá-la, o Engenheiro é responsável ...">Engenheiro</a> responsável pela ordem </dd></dl>
+<div class="fragment"><div class="line"><span class="lineno">  134</span>                                          {</div>
+<div class="line"><span class="lineno">  135</span>    </div>
+<div class="line"><span class="lineno">  136</span>    <span class="keywordflow">return</span> this-&gt;engResponsavel;</div>
+<div class="line"><span class="lineno">  137</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a2c7c719c26ed834a383fb9bf4846d04b" name="a2c7c719c26ed834a383fb9bf4846d04b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c7c719c26ed834a383fb9bf4846d04b">&#9670;&#160;</a></span>getNumOrdem()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int OrdemServico::getNumOrdem </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retorna número da ordem de serviço. </p>
+<dl class="section return"><dt>Retorna</dt><dd>Número da ordem de serviço </dd></dl>
+<div class="fragment"><div class="line"><span class="lineno">   45</span>                              {</div>
+<div class="line"><span class="lineno">   46</span> </div>
+<div class="line"><span class="lineno">   47</span>    <span class="keywordflow">return</span> this-&gt;numOrdem; </div>
+<div class="line"><span class="lineno">   48</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="adfb1c74397533a0ff5f2fac6d5b4c8ac" name="adfb1c74397533a0ff5f2fac6d5b4c8ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adfb1c74397533a0ff5f2fac6d5b4c8ac">&#9670;&#160;</a></span>getOrdemAtual()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int OrdemServico::getOrdemAtual </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Verifica o número da última ordem de de serviço e retorna o número que a próxima ordem deve ser identificada. </p>
+<dl class="section return"><dt>Retorna</dt><dd>Número da próxima ordem de serviço </dd></dl>
+<div class="fragment"><div class="line"><span class="lineno">   36</span>                                {</div>
+<div class="line"><span class="lineno">   37</span>    </div>
+<div class="line"><span class="lineno">   38</span>    <span class="keywordflow">return</span> this-&gt;numOrdem + 1;</div>
+<div class="line"><span class="lineno">   39</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a95fa81f0361d24b90952dcfefd0c5b0b" name="a95fa81f0361d24b90952dcfefd0c5b0b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95fa81f0361d24b90952dcfefd0c5b0b">&#9670;&#160;</a></span>getStatus()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool OrdemServico::getStatus </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retorna status da ordem. </p>
+<dl class="section return"><dt>Retorna</dt><dd>Status da ordem de serviço </dd></dl>
+<div class="fragment"><div class="line"><span class="lineno">  143</span>                             {</div>
+<div class="line"><span class="lineno">  144</span>    </div>
+<div class="line"><span class="lineno">  145</span>    <span class="keywordflow">return</span> this-&gt;concluida;</div>
+<div class="line"><span class="lineno">  146</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a539d4670a38e68696eb0be23ff6c4dd7" name="a539d4670a38e68696eb0be23ff6c4dd7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a539d4670a38e68696eb0be23ff6c4dd7">&#9670;&#160;</a></span>getValor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double OrdemServico::getValor </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retorna valor da <a class="el" href="class_proposta.html" title="Classe responsável por representar todas as propostas recebidas pela empresa. Nela possui informações...">Proposta</a>. </p>
+<dl class="section return"><dt>Retorna</dt><dd>Valor da <a class="el" href="class_proposta.html" title="Classe responsável por representar todas as propostas recebidas pela empresa. Nela possui informações...">Proposta</a> </dd></dl>
+<div class="fragment"><div class="line"><span class="lineno">   63</span>                             {</div>
+<div class="line"><span class="lineno">   64</span> </div>
+<div class="line"><span class="lineno">   65</span>    <span class="keywordflow">return</span> this-&gt;proposta-&gt;<a class="code hl_function" href="class_proposta.html#ae26c6f2fb0d9d83b22b69492599310b4">getValor</a>();</div>
+<div class="line"><span class="lineno">   66</span>};</div>
+<div class="ttc" id="aclass_proposta_html_ae26c6f2fb0d9d83b22b69492599310b4"><div class="ttname"><a href="class_proposta.html#ae26c6f2fb0d9d83b22b69492599310b4">Proposta::getValor</a></div><div class="ttdeci">double getValor()</div><div class="ttdoc">Retorna valor da proposta.</div><div class="ttdef"><b>Definição</b> Proposta.cpp:71</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="acb59965aed12bc6e2c04dcc5640d9e74" name="acb59965aed12bc6e2c04dcc5640d9e74"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb59965aed12bc6e2c04dcc5640d9e74">&#9670;&#160;</a></span>lerArquivo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void OrdemServico::lerArquivo </td>
+          <td>(</td>
+          <td class="paramtype">std::istream &amp;&#160;</td>
+          <td class="paramname"><em>in</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Lê arquivo texto. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">in</td><td>Arquivo texto com todas as ordens antigas da empresa </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><span class="lineno">  183</span>                                            {</div>
+<div class="line"><span class="lineno">  184</span>    </div>
+<div class="line"><span class="lineno">  185</span>    in &gt;&gt; this-&gt;numOrdem;</div>
+<div class="line"><span class="lineno">  186</span>    in.ignore();</div>
+<div class="line"><span class="lineno">  187</span>    getline(in, this-&gt;engResponsavel);</div>
+<div class="line"><span class="lineno">  188</span>    in &gt;&gt; this-&gt;idProposta</div>
+<div class="line"><span class="lineno">  189</span>       &gt;&gt; this-&gt;concluida;</div>
+<div class="line"><span class="lineno">  190</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ae0ce084b6ec1b0cc31df1a26a5348ee8" name="ae0ce084b6ec1b0cc31df1a26a5348ee8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae0ce084b6ec1b0cc31df1a26a5348ee8">&#9670;&#160;</a></span>ordemPaga()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool OrdemServico::ordemPaga </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Verifica se a proposta foi paga. </p>
+<dl class="section return"><dt>Retorna</dt><dd>Status de pagamento </dd></dl>
+<div class="fragment"><div class="line"><span class="lineno">   54</span>                            {</div>
+<div class="line"><span class="lineno">   55</span> </div>
+<div class="line"><span class="lineno">   56</span>    <span class="keywordflow">return</span> this-&gt;proposta-&gt;<a class="code hl_function" href="class_proposta.html#ae113adb89d69684f6ec98dad3930035b">pagamentoRecebido</a>();</div>
+<div class="line"><span class="lineno">   57</span>};</div>
+<div class="ttc" id="aclass_proposta_html_ae113adb89d69684f6ec98dad3930035b"><div class="ttname"><a href="class_proposta.html#ae113adb89d69684f6ec98dad3930035b">Proposta::pagamentoRecebido</a></div><div class="ttdeci">bool pagamentoRecebido()</div><div class="ttdoc">Verifica o pagamento do contrato.</div><div class="ttdef"><b>Definição</b> Proposta.cpp:157</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a8c24b96fcd0858fa5b5a20ce9a2c6124" name="a8c24b96fcd0858fa5b5a20ce9a2c6124"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c24b96fcd0858fa5b5a20ce9a2c6124">&#9670;&#160;</a></span>printArquivo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void OrdemServico::printArquivo </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>out</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Imprime arquivo texto. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">out</td><td>Arquivo texto com todas as ordens de serviço da empresa </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><span class="lineno">  170</span>                                               {</div>
+<div class="line"><span class="lineno">  171</span>    </div>
+<div class="line"><span class="lineno">  172</span>    out &lt;&lt; this-&gt;<a class="code hl_function" href="class_ordem_servico.html#a2c7c719c26ed834a383fb9bf4846d04b">getNumOrdem</a>() &lt;&lt; std::endl</div>
+<div class="line"><span class="lineno">  173</span>        &lt;&lt; this-&gt;engResponsavel &lt;&lt; std::endl</div>
+<div class="line"><span class="lineno">  174</span>        &lt;&lt; this-&gt;proposta-&gt;<a class="code hl_function" href="class_proposta.html#afc10bdf9c02295f0e780a851151ad74c">getNumProposta</a>() &lt;&lt; std::endl</div>
+<div class="line"><span class="lineno">  175</span>        &lt;&lt; this-&gt;concluida &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">  176</span>}</div>
+<div class="ttc" id="aclass_ordem_servico_html_a2c7c719c26ed834a383fb9bf4846d04b"><div class="ttname"><a href="class_ordem_servico.html#a2c7c719c26ed834a383fb9bf4846d04b">OrdemServico::getNumOrdem</a></div><div class="ttdeci">int getNumOrdem()</div><div class="ttdoc">Retorna número da ordem de serviço.</div><div class="ttdef"><b>Definição</b> OrdemServico.cpp:45</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a80ac566abd36ab6da1b7b0b49d2ac18e" name="a80ac566abd36ab6da1b7b0b49d2ac18e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80ac566abd36ab6da1b7b0b49d2ac18e">&#9670;&#160;</a></span>printTela()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void OrdemServico::printTela </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Imprime na tela as informações de todas as ordens de serviço. </p>
+<div class="fragment"><div class="line"><span class="lineno">  152</span>                             {</div>
+<div class="line"><span class="lineno">  153</span>    </div>
+<div class="line"><span class="lineno">  154</span>    std::cout &lt;&lt; <span class="stringliteral">&quot;[ORDEM DE SERVIÇO: &quot;</span> &lt;&lt; this-&gt;<a class="code hl_function" href="class_ordem_servico.html#a2c7c719c26ed834a383fb9bf4846d04b">getNumOrdem</a>() &lt;&lt; <span class="stringliteral">&quot;]&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">  155</span>    <span class="keywordflow">if</span> (this-&gt;concluida == <span class="keyword">true</span>)</div>
+<div class="line"><span class="lineno">  156</span>        std::cout &lt;&lt; <span class="stringliteral">&quot;Esta ordem de serviço está finalizada.&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">  157</span>    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  158</span>        std::cout &lt;&lt; <span class="stringliteral">&quot;Esta ordem de serviço não foi finalizada.&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">  159</span>    std::cout &lt;&lt; <span class="stringliteral">&quot;Engenheiro Responsável: &quot;</span> &lt;&lt; this-&gt;engResponsavel &lt;&lt; std::endl</div>
+<div class="line"><span class="lineno">  160</span>              &lt;&lt; <span class="stringliteral">&quot;Data de entrega: &quot;</span> &lt;&lt; this-&gt;<a class="code hl_function" href="class_ordem_servico.html#a30a9f543963d8481d6a8d54bfaf596a9">getDataEntrega</a>() &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">  161</span> </div>
+<div class="line"><span class="lineno">  162</span>    this-&gt;proposta-&gt;<a class="code hl_function" href="class_proposta.html#a711b7317e5103091b55fe68cbc15fa97">printProposta</a>();</div>
+<div class="line"><span class="lineno">  163</span>}</div>
+<div class="ttc" id="aclass_ordem_servico_html_a30a9f543963d8481d6a8d54bfaf596a9"><div class="ttname"><a href="class_ordem_servico.html#a30a9f543963d8481d6a8d54bfaf596a9">OrdemServico::getDataEntrega</a></div><div class="ttdeci">std::string getDataEntrega()</div><div class="ttdoc">Retorna data de entrega da ordem.</div><div class="ttdef"><b>Definição</b> OrdemServico.cpp:125</div></div>
+<div class="ttc" id="aclass_proposta_html_a711b7317e5103091b55fe68cbc15fa97"><div class="ttname"><a href="class_proposta.html#a711b7317e5103091b55fe68cbc15fa97">Proposta::printProposta</a></div><div class="ttdeci">void printProposta()</div><div class="ttdoc">Imprime na tela as informações de todas as propostas.</div><div class="ttdef"><b>Definição</b> Proposta.cpp:235</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a83bbb6a102a2bf9ecde7f8619e0649cf" name="a83bbb6a102a2bf9ecde7f8619e0649cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a83bbb6a102a2bf9ecde7f8619e0649cf">&#9670;&#160;</a></span>setContrato()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void OrdemServico::setContrato </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_proposta.html">Proposta</a> *&#160;</td>
+          <td class="paramname"><em>_proposta</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Atualiza proposta fechada tornando-a um contrato. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">_proposta</td><td><a class="el" href="class_proposta.html" title="Classe responsável por representar todas as propostas recebidas pela empresa. Nela possui informações...">Proposta</a> que irá virar contrato </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><span class="lineno">   73</span>                                                  {</div>
+<div class="line"><span class="lineno">   74</span>    </div>
+<div class="line"><span class="lineno">   75</span>    this-&gt;proposta = _proposta;</div>
+<div class="line"><span class="lineno">   76</span>    this-&gt;idProposta = this-&gt;proposta-&gt;<a class="code hl_function" href="class_proposta.html#af3c9370f29b5e3906975d5b1c19e8176">getPropostaAtual</a>();</div>
+<div class="line"><span class="lineno">   77</span>    this-&gt;proposta-&gt;<a class="code hl_function" href="class_proposta.html#abb61e7a7838e42be88a3e36b42900022">setContratoFechado</a>();</div>
+<div class="line"><span class="lineno">   78</span>}</div>
+<div class="ttc" id="aclass_proposta_html_af3c9370f29b5e3906975d5b1c19e8176"><div class="ttname"><a href="class_proposta.html#af3c9370f29b5e3906975d5b1c19e8176">Proposta::getPropostaAtual</a></div><div class="ttdeci">int getPropostaAtual()</div><div class="ttdoc">Verifica número da proposta atual.</div><div class="ttdef"><b>Definição</b> Proposta.cpp:90</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a1bce17adc9e055fe201137e33be07482" name="a1bce17adc9e055fe201137e33be07482"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1bce17adc9e055fe201137e33be07482">&#9670;&#160;</a></span>setDataEntrega()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void OrdemServico::setDataEntrega </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>_dataEntrega</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Atualiza data da entrega da ordem de serviço. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">_dataEntrega</td><td>Data de entrega da ordem </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><span class="lineno">   97</span>                                                        {</div>
+<div class="line"><span class="lineno">   98</span>    </div>
+<div class="line"><span class="lineno">   99</span>    this-&gt;dataEntrega = _dataEntrega;</div>
+<div class="line"><span class="lineno">  100</span>    this-&gt;concluida = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  101</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a373c875d6cdcbe800a4e450311c36688" name="a373c875d6cdcbe800a4e450311c36688"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a373c875d6cdcbe800a4e450311c36688">&#9670;&#160;</a></span>setEngenheiro()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void OrdemServico::setEngenheiro </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>_engResponsavel</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Atribui engenheiro a ordem de serviço. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">_engResponsavel</td><td><a class="el" href="class_engenheiro.html" title="Classe responsável por executar uma ordem de serviço. Além de realizá-la, o Engenheiro é responsável ...">Engenheiro</a> responsável </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><span class="lineno">  107</span>                                                          {</div>
+<div class="line"><span class="lineno">  108</span>    </div>
+<div class="line"><span class="lineno">  109</span>    this-&gt;engResponsavel = _engResponsavel;</div>
+<div class="line"><span class="lineno">  110</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a22024a2523f5ddf5e91e02d3eb9c028c" name="a22024a2523f5ddf5e91e02d3eb9c028c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a22024a2523f5ddf5e91e02d3eb9c028c">&#9670;&#160;</a></span>setPagamento()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void OrdemServico::setPagamento </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>_valor</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>_dataPagamento</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Atualiza informações de pagamento do contrato. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">_valor</td><td>Valor do pagamento </td></tr>
+    <tr><td class="paramname">_dataPagamento</td><td>Data do pagamento </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><span class="lineno">   86</span>                                                                      {</div>
+<div class="line"><span class="lineno">   87</span> </div>
+<div class="line"><span class="lineno">   88</span>    this-&gt;proposta-&gt;<a class="code hl_function" href="class_proposta.html#ad1299873fa1afac38b91e54607134a73">setContratoPago</a>(_valor,_dataPagamento);</div>
+<div class="line"><span class="lineno">   89</span> </div>
+<div class="line"><span class="lineno">   90</span>};</div>
+<div class="ttc" id="aclass_proposta_html_ad1299873fa1afac38b91e54607134a73"><div class="ttname"><a href="class_proposta.html#ad1299873fa1afac38b91e54607134a73">Proposta::setContratoPago</a></div><div class="ttdeci">void setContratoPago(double _valor, std::string _dataPagamento)</div><div class="ttdoc">Verifica pagamento do contrato e imprime status da transação.</div><div class="ttdef"><b>Definição</b> Proposta.cpp:131</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Documentação dos símbolos amigos e relacionados</h2>
+<a id="a0bcfb3f3097788e5f7d887765b409f37" name="a0bcfb3f3097788e5f7d887765b409f37"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0bcfb3f3097788e5f7d887765b409f37">&#9670;&#160;</a></span>operator&lt;&lt;</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::ostream &amp; operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>out</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_ordem_servico.html">OrdemServico</a> &amp;&#160;</td>
+          <td class="paramname"><em>oS</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sobrecarrega operador &lt;&lt; para ler objeto do tipo <a class="el" href="class_ordem_servico.html" title="Quando uma proposta é fechada, ou seja, o cliente deu a confirmação de que deseja trabalhar com a emp...">OrdemServico</a> no arquivo texto. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">out</td><td>Arquivo texto com todas as ordens de serviço da empresa </td></tr>
+    <tr><td class="paramname">os</td><td>Ordem de serviço que será atribuida </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><span class="lineno">  199</span>                                                          {</div>
+<div class="line"><span class="lineno">  200</span>    </div>
+<div class="line"><span class="lineno">  201</span>    oS.<a class="code hl_function" href="class_ordem_servico.html#a8c24b96fcd0858fa5b5a20ce9a2c6124">printArquivo</a>(out);</div>
+<div class="line"><span class="lineno">  202</span>    <span class="keywordflow">return</span> out;</div>
+<div class="line"><span class="lineno">  203</span>}</div>
+<div class="ttc" id="aclass_ordem_servico_html_a8c24b96fcd0858fa5b5a20ce9a2c6124"><div class="ttname"><a href="class_ordem_servico.html#a8c24b96fcd0858fa5b5a20ce9a2c6124">OrdemServico::printArquivo</a></div><div class="ttdeci">void printArquivo(std::ostream &amp;out)</div><div class="ttdoc">Imprime arquivo texto.</div><div class="ttdef"><b>Definição</b> OrdemServico.cpp:170</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aa6bb97910e9b561d984dc3b45098525d" name="aa6bb97910e9b561d984dc3b45098525d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa6bb97910e9b561d984dc3b45098525d">&#9670;&#160;</a></span>operator&gt;&gt;</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::istream &amp; operator&gt;&gt; </td>
+          <td>(</td>
+          <td class="paramtype">std::istream &amp;&#160;</td>
+          <td class="paramname"><em>in</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_ordem_servico.html">OrdemServico</a> &amp;&#160;</td>
+          <td class="paramname"><em>oS</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sobrecarrega operador &gt;&gt; para enviar informações do objeto para o arquivo texto. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">in</td><td>Arquivo texto com todas as ordens antigas da empresa </td></tr>
+    <tr><td class="paramname">os</td><td>Ordem de serviço que será atribuida </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><span class="lineno">  212</span>                                                         {</div>
+<div class="line"><span class="lineno">  213</span>    </div>
+<div class="line"><span class="lineno">  214</span>    oS.<a class="code hl_function" href="class_ordem_servico.html#acb59965aed12bc6e2c04dcc5640d9e74">lerArquivo</a>(in);</div>
+<div class="line"><span class="lineno">  215</span>    <span class="keywordflow">return</span> in;</div>
+<div class="line"><span class="lineno">  216</span>}</div>
+<div class="ttc" id="aclass_ordem_servico_html_acb59965aed12bc6e2c04dcc5640d9e74"><div class="ttname"><a href="class_ordem_servico.html#acb59965aed12bc6e2c04dcc5640d9e74">OrdemServico::lerArquivo</a></div><div class="ttdeci">void lerArquivo(std::istream &amp;in)</div><div class="ttdoc">Lê arquivo texto.</div><div class="ttdef"><b>Definição</b> OrdemServico.cpp:183</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<hr/>A documentação para essa classe foi gerada a partir dos seguintes arquivos:<ul>
+<li>include/<a class="el" href="_ordem_servico_8hpp_source.html">OrdemServico.hpp</a></li>
+<li>src/entidades/OrdemServico.cpp</li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.7
+</small></address>
+</body>
+</html>
