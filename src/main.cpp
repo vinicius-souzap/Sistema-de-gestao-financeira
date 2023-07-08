@@ -32,10 +32,11 @@
  * @brief printa na tela todas as propostas já cadastradas
  * @param propostas array de propostas que será percorrido 
 */
-void mostrarPropostas(std::vector<Proposta*>& propostas){
-    
+void mostrarPropostas(std::vector<Proposta*>& propostas)
+{  
     if(!propostas.empty())    
-        for(auto it = propostas.begin(); it != propostas.end(); it ++){
+        for(auto it = propostas.begin(); it != propostas.end(); it ++)
+        {
             Proposta* aux = *it;
             aux->printProposta();
         }
@@ -46,10 +47,11 @@ void mostrarPropostas(std::vector<Proposta*>& propostas){
  * @brief printa somentes propostas que não são ordens de serviço
  * @param propostas array de propostas que será verificado
  */ 
-void mostrarPropostasAberto(std::vector<Proposta*>& propostas){
-    
+void mostrarPropostasAberto(std::vector<Proposta*>& propostas)
+{    
     if(!propostas.empty())
-        for(auto it = propostas.begin(); it != propostas.end(); it ++){
+        for(auto it = propostas.begin(); it != propostas.end(); it ++)
+        {
             Proposta* aux = *it;
             if(aux->contratoAssinado() == false)
                 aux->printProposta();
@@ -61,10 +63,11 @@ void mostrarPropostasAberto(std::vector<Proposta*>& propostas){
  * @brief printa na tela todas as ordens de serviços já cadastradas
  * @param ordens array de ordens de serviços que será verificado
  */
-void mostrarOrdensServico(std::vector<OrdemServico*>& ordens){
-    
+void mostrarOrdensServico(std::vector<OrdemServico*>& ordens)
+{    
     if(!ordens.empty())   
-        for(auto it = ordens.begin(); it != ordens.end(); it++){
+        for(auto it = ordens.begin(); it != ordens.end(); it++)
+        {
             OrdemServico* aux = *it;
             aux->printTela();
         }
@@ -76,10 +79,11 @@ void mostrarOrdensServico(std::vector<OrdemServico*>& ordens){
  * atribuídas como tarefa para um Engenheiro
  * @param ordens array de ordens de serviços que será verificado
  */
-void mostrarOrdensServicoAberta(std::vector<OrdemServico*>& ordens){
-    
+void mostrarOrdensServicoAberta(std::vector<OrdemServico*>& ordens)
+{    
     if(!ordens.empty())
-        for(auto it = ordens.begin(); it != ordens.end(); it++){
+        for(auto it = ordens.begin(); it != ordens.end(); it++)
+        {
             OrdemServico* aux = *it;
             
             if(aux->getStatus() == false)
@@ -95,8 +99,8 @@ void mostrarOrdensServicoAberta(std::vector<OrdemServico*>& ordens){
  * @param numPropostaAtual inteiro que indica qual foi 
  * o número da última proposta cadastrada
  */
-void cadastrarProposta(std::vector<Proposta*>& propostas, int& numPropostaAtual){
-    
+void cadastrarProposta(std::vector<Proposta*>& propostas, int& numPropostaAtual)
+{    
     std::string nome, descricao, dataAssinatura;
     double valor;
     
@@ -127,7 +131,8 @@ void cadastrarProposta(std::vector<Proposta*>& propostas, int& numPropostaAtual)
  * @param numOrdemAtual indica qual foi o número da 
  * última ordem cadastrada
  */
-void cadastrarOrdemServico(std::vector<OrdemServico*>& ordens, std::vector<Proposta*>& propostas, int& numOrdemAtual){
+void cadastrarOrdemServico(std::vector<OrdemServico*>& ordens, std::vector<Proposta*>& propostas, int& numOrdemAtual)
+{
     
     std::cout << "Gerar ordem de serviço para qual contrato?" << std::endl
               << "Digite o N° da proposta do contrato:" << std::endl << std::endl;
@@ -139,11 +144,13 @@ void cadastrarOrdemServico(std::vector<OrdemServico*>& ordens, std::vector<Propo
     std::string dataAssinatura;
     std::cin >> dataAssinatura;
     
-    for(auto it = propostas.begin(); it != propostas.end(); it++){
+    for(auto it = propostas.begin(); it != propostas.end(); it++)
+    {
         
         Proposta* aux = *it;
         
-        if(id == aux->getNumProposta()){
+        if(id == aux->getNumProposta())
+        {
             OrdemServico* novaOrdem = new OrdemServico(numOrdemAtual, aux, dataAssinatura);
             numOrdemAtual = novaOrdem->getOrdemAtual();
             ordens.push_back(novaOrdem);
@@ -159,13 +166,16 @@ void cadastrarOrdemServico(std::vector<OrdemServico*>& ordens, std::vector<Propo
  * @param engenheiros array de Engenheiro que será percorrido
  * @param id número para identificar o engenheiro alvo
  */
-void exibirQuantTarefas(std::vector<Engenheiro*>& engenheiros, int id){
+void exibirQuantTarefas(std::vector<Engenheiro*>& engenheiros, int id)
+{
     
-    for(auto it = engenheiros.begin(); it != engenheiros.end(); it++){
+    for(auto it = engenheiros.begin(); it != engenheiros.end(); it++)
+    {
         
         Engenheiro* aux = *it;
         
-        if(id == aux->getId()){
+        if(id == aux->getId())
+        {
             std::cout << "Número de tarefas do Engenheiro " << id << ": "
             << aux->getNumTarefas() << std::endl;
             break;
@@ -178,24 +188,29 @@ void exibirQuantTarefas(std::vector<Engenheiro*>& engenheiros, int id){
  * @param engenheiros array de referência de Engenheiro
  * @param idEng número de identificação do Engenheiro alvo
  */
-void adicionarOrdem(std::vector<OrdemServico*>& ordens, std::vector<Engenheiro*>& engenheiros, int idEng){
+void adicionarOrdem(std::vector<OrdemServico*>& ordens, std::vector<Engenheiro*>& engenheiros, int idEng)
+{
     
     mostrarOrdensServicoAberta(ordens);
     
-    for(auto it = engenheiros.begin(); it != engenheiros.end(); it++){
+    for(auto it = engenheiros.begin(); it != engenheiros.end(); it++)
+    {
         
         Engenheiro* aux = *it;
         
-        if(idEng == aux->getId()){
+        if(idEng == aux->getId())
+        {
             
             int idOrdem;
             std::cout << "Selecione o ID da ordem a ser atribuída: " << std::endl;
             std::cin >> idOrdem;
-            for(auto it2 = ordens.begin(); it2 != ordens.end(); it2++){
+            for(auto it2 = ordens.begin(); it2 != ordens.end(); it2++)
+            {
                 
                 OrdemServico* aux2 = *it2;
                 
-                if(idOrdem == aux2->getNumOrdem()){
+                if(idOrdem == aux2->getNumOrdem())
+                {
                     aux->adicionarTarefa(aux2);
                     break;
                 }
@@ -213,13 +228,16 @@ void adicionarOrdem(std::vector<OrdemServico*>& ordens, std::vector<Engenheiro*>
  * @param engenheiros array de referência de Engenheiro
  * @param idEng indica qual a identificação do Engenheiro alvo
  */
-void encerrarOrdem(std::vector<Engenheiro*>& engenheiros, int idEng){
+void encerrarOrdem(std::vector<Engenheiro*>& engenheiros, int idEng)
+{
     
-    for(auto it = engenheiros.begin(); it != engenheiros.end(); it++){
+    for(auto it = engenheiros.begin(); it != engenheiros.end(); it++)
+    {
         
         Engenheiro* aux = *it;
         
-        if(idEng == aux->getId()){
+        if(idEng == aux->getId())
+        {
     
             int idOrdem;
                         
@@ -243,13 +261,16 @@ void encerrarOrdem(std::vector<Engenheiro*>& engenheiros, int idEng){
  * @param engenheiros array de referência de Engenheiro
  * @param idEng indica o id do engenheiro alvo
  */
-void exibirTarefasEngenheiro(std::vector<Engenheiro*>& engenheiros, int idEng){
+void exibirTarefasEngenheiro(std::vector<Engenheiro*>& engenheiros, int idEng)
+{
     
-    for(auto it = engenheiros.begin(); it != engenheiros.end(); it++){
+    for(auto it = engenheiros.begin(); it != engenheiros.end(); it++)
+    {
         
         Engenheiro* aux = *it;
         
-        if(idEng == aux->getId()){
+        if(idEng == aux->getId())
+        {
             aux->printListaTarefas();
             break;
         }
@@ -260,13 +281,16 @@ void exibirTarefasEngenheiro(std::vector<Engenheiro*>& engenheiros, int idEng){
  * @param engenheiros array de referência de Engenheiro
  * @param idEng indica o id do engenheiro alvo
  */
-void exibirInfoEngenheiro(std::vector<Engenheiro*>& engenheiros, int idEng){
+void exibirInfoEngenheiro(std::vector<Engenheiro*>& engenheiros, int idEng)
+{
     
-    for(auto it = engenheiros.begin(); it != engenheiros.end(); it++){
+    for(auto it = engenheiros.begin(); it != engenheiros.end(); it++)
+    {
         
         Engenheiro* aux = *it;
         
-        if(idEng == aux->getId()){
+        if(idEng == aux->getId())
+        {
             aux->printInfo();
             break;
         }
@@ -278,12 +302,15 @@ void exibirInfoEngenheiro(std::vector<Engenheiro*>& engenheiros, int idEng){
  * @param orcamentistas array de referência de Orçamentista
  * @param idOrcam indica o id do orçamentista alvo
  */
-void gerarPropostasAbertas(std::vector<Orcamentista*>& orcamentistas, int idOrcam){
+void gerarPropostasAbertas(std::vector<Orcamentista*>& orcamentistas, int idOrcam)
+{
     
-    for(auto it = orcamentistas.begin(); it != orcamentistas.end(); it++){
+    for(auto it = orcamentistas.begin(); it != orcamentistas.end(); it++)
+    {
         Orcamentista* aux = *it;
         
-        if(idOrcam == aux->getId()){
+        if(idOrcam == aux->getId())
+        {
             aux->imprimirPropostasFechadas();
             break;
         }
@@ -295,12 +322,15 @@ void gerarPropostasAbertas(std::vector<Orcamentista*>& orcamentistas, int idOrca
  * @param orcamentistas array de referencia de Orcamentista
  * @param idOrcam indica o id do orçamentista alvo
  */
-void gerarPropostasFechadas(std::vector<Orcamentista*>& orcamentistas, int idOrcam){
+void gerarPropostasFechadas(std::vector<Orcamentista*>& orcamentistas, int idOrcam)
+{
     
-    for(auto it = orcamentistas.begin(); it != orcamentistas.end(); it++){
+    for(auto it = orcamentistas.begin(); it != orcamentistas.end(); it++)
+    {
         Orcamentista* aux = *it;
         
-        if(idOrcam == aux->getId()){
+        if(idOrcam == aux->getId())
+        {
             aux->imprimirPropostasAbertas();
             break;
         }
@@ -312,21 +342,26 @@ void gerarPropostasFechadas(std::vector<Orcamentista*>& orcamentistas, int idOrc
  * @param propostas array de referência de Proposta
  * @idOrcam indica o id do orçamentista alvo
  */
-void adicionarProposta(std::vector<Orcamentista*>& orcamentistas, std::vector<Proposta*>& propostas, int idOrcam){
+void adicionarProposta(std::vector<Orcamentista*>& orcamentistas, std::vector<Proposta*>& propostas, int idOrcam)
+{
     
-    for(auto it = orcamentistas.begin(); it != orcamentistas.end(); it++){
+    for(auto it = orcamentistas.begin(); it != orcamentistas.end(); it++)
+    {
         Orcamentista* aux = *it;
         
-        if(idOrcam == aux->getId()){
+        if(idOrcam == aux->getId())
+        {
             
             int idProp;
             std::cout << "Digite o ID correspondente da proposta:" << std::endl;
             std::cin >> idProp;
             
-            for(auto it2 = propostas.begin(); it2 != propostas.end(); it2++){
+            for(auto it2 = propostas.begin(); it2 != propostas.end(); it2++)
+            {
                 
                 Proposta* aux2 = *it2;
-                if(idProp == aux2->getNumProposta()){
+                if(idProp == aux2->getNumProposta())
+                {
                     aux->adicionarProposta(aux2);
                     break;
                 }
@@ -340,12 +375,15 @@ void adicionarProposta(std::vector<Orcamentista*>& orcamentistas, std::vector<Pr
  * determinado orçamentista
  * @param idOrcam indica o id do orçamentista alvo
  */
-void exibirProgressoMeta(std::vector<Orcamentista*>& orcamentistas, int idOrcam){
+void exibirProgressoMeta(std::vector<Orcamentista*>& orcamentistas, int idOrcam)
+{
     
-    for(auto it = orcamentistas.begin(); it != orcamentistas.end(); it++){
+    for(auto it = orcamentistas.begin(); it != orcamentistas.end(); it++)
+    {
         Orcamentista* aux = *it;
         
-        if(idOrcam == aux->getId()){
+        if(idOrcam == aux->getId())
+        {
             aux->progressoMeta();
             break;
         }
@@ -356,12 +394,15 @@ void exibirProgressoMeta(std::vector<Orcamentista*>& orcamentistas, int idOrcam)
  * @param orcamentistas array de referência de Orçamentista
  * @idOrcam indica o id do orçamentista alvo
  */
-void exibirInfoOrcamentista(std::vector<Orcamentista*>& orcamentistas, int idOrcam){
+void exibirInfoOrcamentista(std::vector<Orcamentista*>& orcamentistas, int idOrcam)
+{
     
-    for(auto it = orcamentistas.begin(); it != orcamentistas.end(); it++){
+    for(auto it = orcamentistas.begin(); it != orcamentistas.end(); it++)
+    {
         Orcamentista* aux = *it;
         
-        if(idOrcam == aux->getId()){
+        if(idOrcam == aux->getId())
+        {
             aux->printInfo();
             break;
         }
@@ -375,7 +416,8 @@ void exibirInfoOrcamentista(std::vector<Orcamentista*>& orcamentistas, int idOrc
  * @param ordensAtuais array de referência de todas as 
  * ordens de serviço atualmente cadastradas
  */
-void exibirStatusPagamento(Contador* ct1, std::vector<OrdemServico*>& ordensAtuais){
+void exibirStatusPagamento(Contador* ct1, std::vector<OrdemServico*>& ordensAtuais)
+{
     
     mostrarOrdensServico(ordensAtuais);
     std::cout << "Selecione a ordem correspondente:" << std::endl;
@@ -391,7 +433,8 @@ void exibirStatusPagamento(Contador* ct1, std::vector<OrdemServico*>& ordensAtua
  * @param ordensAtuais array de referência de todas as 
  * ordens de serviço atualmente cadastradas
  */
-void pagarOrdem(Contador* ct1, std::vector<OrdemServico*>& ordensAtuais){
+void pagarOrdem(Contador* ct1, std::vector<OrdemServico*>& ordensAtuais)
+{
     
     mostrarOrdensServico(ordensAtuais);
     int numOrdem, valor;
@@ -414,7 +457,8 @@ void pagarOrdem(Contador* ct1, std::vector<OrdemServico*>& ordensAtuais){
  * @brief função responsável pela parada do programa
  * após os comandos feitos pelo usuário
  */
-void pressionarParaContinuar(){
+void pressionarParaContinuar()
+{
     
     std::cout << "Pressione qualquer tecla para retornar:" << std::endl;
     char getEntrada;
@@ -423,7 +467,8 @@ void pressionarParaContinuar(){
 /**
  * printa no terminal o menu principal e suas opções
  */
-void abrirMenuPrincipal(){
+void abrirMenuPrincipal()
+{
     
     std::cout << "BEM VINDO AO MENU DE OPÇÕES!" << std::endl
     << "Pressione: " << std::endl
@@ -446,7 +491,8 @@ void abrirMenuPrincipal(){
  * @param numPropostaAtual indica qual o número da 
  * última Proposta cadastrada
  */
-void abrirMenuCadastros(std::vector<Proposta*>& propostasAtuais, std::vector<OrdemServico*>& ordensAtuais, int& numOrdemAtual, int& numPropostaAtual){
+void abrirMenuCadastros(std::vector<Proposta*>& propostasAtuais, std::vector<OrdemServico*>& ordensAtuais, int& numOrdemAtual, int& numPropostaAtual)
+{
     
     std::cout << "Entrou no menu de cadastros!" << std::endl
     << "Pressione: " << std::endl
@@ -457,14 +503,17 @@ void abrirMenuCadastros(std::vector<Proposta*>& propostasAtuais, std::vector<Ord
     char subComando;
     std::cin >> subComando;
     
-    switch(subComando){
+    switch(subComando)
+    {
         
-        case 'p': {
+        case 'p': 
+         {
             system("clear");
             cadastrarProposta(propostasAtuais, numPropostaAtual);
             break;
         } 
-        case 'o': {
+        case 'o': 
+         {
             system("clear");
             mostrarPropostasAberto(propostasAtuais);
             cadastrarOrdemServico(ordensAtuais, propostasAtuais, numOrdemAtual);
@@ -480,7 +529,8 @@ void abrirMenuCadastros(std::vector<Proposta*>& propostasAtuais, std::vector<Ord
  * @param ordensAtuais array que guarda as ordens de serviço
  * cadastradas
  */
-void abrirMenuEngenheiro(std::vector<Engenheiro*>& engenheiros, std::vector<OrdemServico*>& ordensAtuais){
+void abrirMenuEngenheiro(std::vector<Engenheiro*>& engenheiros, std::vector<OrdemServico*>& ordensAtuais)
+{
     
     char subComando; int idEng;
                                 
@@ -498,7 +548,8 @@ void abrirMenuEngenheiro(std::vector<Engenheiro*>& engenheiros, std::vector<Orde
     << "'V' para voltar ao menu principal." << std::endl;
 
     std::cin >> subComando;
-    switch(subComando){
+    switch(subComando)
+    {
         
         case 'm':
             system("clear");
@@ -506,51 +557,64 @@ void abrirMenuEngenheiro(std::vector<Engenheiro*>& engenheiros, std::vector<Orde
             pressionarParaContinuar();
             break;
             
-        case 'a': {
+        case 'a': 
+         {
             system("clear");
-            try{
+            try
+             {
                 adicionarOrdem(ordensAtuais, engenheiros, idEng);
-            } catch(QueueFullException& e){
+            } catch(QueueFullException& e)
+             {
                 system("clear");
                 std::cout << e.what() << std::endl;
                 pressionarParaContinuar();
-            } catch(QueueEmptyException& e){
+            } catch(QueueEmptyException& e)
+             {
                 system("clear");
                 std::cout << e.what() << std::endl;
                 pressionarParaContinuar();
             }
             break;
         }
-        case 'e': {
+        case 'e': 
+         {
             system("clear");
-            try{
+            try
+             {
                 encerrarOrdem(engenheiros, idEng);
-            } catch(AlreadyExecuted& e){
+            } catch(AlreadyExecuted& e)
+             {
                 system("clear");
                 std::cout << e.what() << std::endl;
                 pressionarParaContinuar();
-            } catch(QueueEmptyException& e){
+            } catch(QueueEmptyException& e)
+             {
                 system("clear");
                 std::cout << e.what() << std::endl;
                 pressionarParaContinuar();
-            } catch(ItemNotFoundException& e){
+            } catch(ItemNotFoundException& e)
+             {
                 system("clear");
                 std::cout << e.what() << std::endl;
                 pressionarParaContinuar();
             }
             break;
         }
-        case 'p': {
+        case 'p': 
+         {
             system("clear");
-            try{
+            try
+             {
                 exibirTarefasEngenheiro(engenheiros, idEng);
-            } catch(QueueEmptyException& e){
+            } catch(QueueEmptyException& e)
+             {
                 std::cout << e.what() << std::endl;
             }
             pressionarParaContinuar();
             break;
         }
-        case 'i': {
+        case 'i': 
+         {
             system("clear");
             exibirInfoEngenheiro(engenheiros, idEng);
             pressionarParaContinuar();
@@ -566,7 +630,8 @@ void abrirMenuEngenheiro(std::vector<Engenheiro*>& engenheiros, std::vector<Orde
  * relacionada a faturas e pagamentos
  * @param ordensAtuais array de OrdemServico cadastradas
  */
-void abrirMenuContador(Contador* ct1, std::vector<OrdemServico*>& ordensAtuais){
+void abrirMenuContador(Contador* ct1, std::vector<OrdemServico*>& ordensAtuais)
+{
     
     char subComando;
     std::cout << "Entrou no menu do Contador!" << std::endl;
@@ -580,57 +645,73 @@ void abrirMenuContador(Contador* ct1, std::vector<OrdemServico*>& ordensAtuais){
     
     std::cin >> subComando;
     
-    switch(subComando){
+    switch(subComando)
+    {
         
-        case 's': {
+        case 's': 
+         {
             system("clear");
-            try{
+            try
+             {
                 exibirStatusPagamento(ct1, ordensAtuais);
-            } catch(QueueEmptyException& e){
+            } catch(QueueEmptyException& e)
+             {
                 system("clear");
                 std::cout << e.what() << std::endl;
-            } catch(ItemNotFoundException& e){
+            } catch(ItemNotFoundException& e)
+             {
                 system("clear");
                 std::cout << e.what() << std::endl;
             }
             pressionarParaContinuar();
             break;
         }    
-        case 'r': {
+        case 'r': 
+         {
             system("clear");
-            try{
+            try
+             {
                 ct1->printHistoricoFinanceiro();
-            } catch(QueueEmptyException& e){
+            } catch(QueueEmptyException& e)
+             {
                 system("clear");
                 std::cout << e.what() << std::endl;
             }
             pressionarParaContinuar();
             break;
         } 
-        case 'p': {
+        case 'p': 
+         {
             system("clear");
-            try{    
+            try
+             {    
                 pagarOrdem(ct1, ordensAtuais);
-            } catch(AlreadyExecuted& e){
+            } catch(AlreadyExecuted& e)
+             {
                 system("clear");
                 std::cout << e.what() << std::endl;
                 pressionarParaContinuar();
-            } catch(QueueEmptyException& e){
+            } catch(QueueEmptyException& e)
+             {
                 system("clear");
                 std::cout << e.what() << std::endl;
                 pressionarParaContinuar();
-            } catch(ItemNotFoundException& e){
+            } catch(ItemNotFoundException& e)
+             {
                 system("clear");
                 std::cout << e.what() << std::endl;
                 pressionarParaContinuar();
             }
             break;
         } 
-        case 'o': {
+        case 'o': 
+         {
             system("clear");
-            try{
+            try
+             {
                 ct1->printListaOS();
-            } catch(QueueEmptyException& e){
+            } catch(QueueEmptyException& e)
+             {
                 system("clear");
                 std::cout << e.what() << std::endl;
             }
@@ -646,7 +727,8 @@ void abrirMenuContador(Contador* ct1, std::vector<OrdemServico*>& ordensAtuais){
  * @param orcamentistas array de Orcamentista
  * @param propostasAtuais array de Proposta que foram cadastradas
  */
-void abrirMenuOrcamentista(std::vector<Orcamentista*>& orcamentistas, std::vector<Proposta*>& propostasAtuais){
+void abrirMenuOrcamentista(std::vector<Orcamentista*>& orcamentistas, std::vector<Proposta*>& propostasAtuais)
+{
     
     char subComando;
     int idOrcam;
@@ -666,42 +748,52 @@ void abrirMenuOrcamentista(std::vector<Orcamentista*>& orcamentistas, std::vecto
     
     std::cin >> subComando;
     
-    switch(subComando){
+    switch(subComando)
+    {
         
-        case 'f': {
+        case 'f': 
+         {
             system("clear");
-            try{
+            try
+             {
                 gerarPropostasAbertas(orcamentistas, idOrcam);
-            } catch(QueueEmptyException& e){
+            } catch(QueueEmptyException& e)
+             {
                 system("clear");
                 std::cout << e.what() << std::endl;
             }
             pressionarParaContinuar();
             break;
         }
-        case 'a': {
+        case 'a': 
+         {
             system("clear");
-            try{
+            try
+             {
                 gerarPropostasFechadas(orcamentistas, idOrcam);
-            } catch(QueueEmptyException& e){
+            } catch(QueueEmptyException& e)
+             {
                 system("clear");
                 std::cout << e.what() << std::endl;
             }
             pressionarParaContinuar();
             break;
         }
-        case 'c': {
+        case 'c': 
+         {
             system("clear");
             adicionarProposta(orcamentistas, propostasAtuais, idOrcam);
             pressionarParaContinuar();
             break;
         }
-        case 'p': {
+        case 'p': 
+         {
             exibirProgressoMeta(orcamentistas, idOrcam);
             pressionarParaContinuar();
             break;
         }
-        case 'i': {
+        case 'i': 
+         {
             system("clear");
             exibirInfoOrcamentista(orcamentistas, idOrcam);
             pressionarParaContinuar();
@@ -717,7 +809,8 @@ void abrirMenuOrcamentista(std::vector<Orcamentista*>& orcamentistas, std::vecto
  * menu de opções, sobrescrita de dados nos arquivos após
  * finalização do programa
  */
-int main(){
+int main()
+{
     
     //todos os arquivos estão abertos inicialmente apenas para leitura e obtenção de dados
     std::fstream arq1("./database/Propostas.txt");
@@ -725,7 +818,8 @@ int main(){
     std::fstream arq3("./database/ultimaOrdem.txt"); 
     std::fstream arq4("./database/ultimaProposta.txt");
     
-    if( !arq1.is_open() || !arq2.is_open() || !arq3.is_open() || !arq4.is_open() ) {
+    if( !arq1.is_open() || !arq2.is_open() || !arq3.is_open() || !arq4.is_open() ) 
+    {
         std::cerr << "Erro ao abrir o arquivo: " << std::strerror(errno) << std::endl;
         return 1;
     }
@@ -751,43 +845,51 @@ int main(){
     engenheiros.push_back(eg1); engenheiros.push_back(eg2); engenheiros.push_back(eg3);
     orcamentistas.push_back(oc1); orcamentistas.push_back(oc2);
     
-    for(int i = 0; i < numPropostaAtual; i++){
+    for(int i = 0; i < numPropostaAtual; i++)
+    {
         
         Proposta* c1 = new Proposta();
         arq1 >> *c1;
         propostasAtuais.push_back(c1);
         
-        for(auto it = orcamentistas.begin(); it != orcamentistas.end(); it++){
+        for(auto it = orcamentistas.begin(); it != orcamentistas.end(); it++)
+        {
             
             Orcamentista* aux = *it;
             
-            if(aux->getNome() == c1->getOrcamentistaResponsavel()){
+            if(aux->getNome() == c1->getOrcamentistaResponsavel())
+            {
                 aux->adicionarProposta(c1);
             }
         }
     }
     
-    for(int i = 0; i < numOrdemAtual; i++){
+    for(int i = 0; i < numOrdemAtual; i++)
+    {
     
         OrdemServico* oS1 = new OrdemServico();
         arq2 >> *oS1;
         
-        for(auto it = propostasAtuais.begin(); it != propostasAtuais.end(); it++){
+        for(auto it = propostasAtuais.begin(); it != propostasAtuais.end(); it++)
+        {
             
             Proposta* aux = *it;
             int i = aux->getNumProposta();
             
-            if(oS1->getIdProposta() == i){
+            if(oS1->getIdProposta() == i)
+            {
                 oS1->setContrato(aux);
                 ordensAtuais.push_back(oS1);
                 break;
             }
         }
-        for(auto it = engenheiros.begin(); it != engenheiros.end(); it++){
+        for(auto it = engenheiros.begin(); it != engenheiros.end(); it++)
+        {
             
             Engenheiro* aux = *it;
             
-            if(aux->getNome() == oS1->getNomeEngenheiro()){
+            if(aux->getNome() == oS1->getNomeEngenheiro())
+            {
                 aux->adicionarTarefa(oS1);
                 break;
             }
@@ -810,54 +912,67 @@ int main(){
     numPropostaAtual += 1;
     
     //entra no menu de opções do usuário
-    while(i != 1){
+    while(i != 1)
+    {
         
         abrirMenuPrincipal();
         std::cin >> comando;
         
-        switch(comando){
+        switch(comando)
+        {
             
-            case 'q': {
+            case 'q': 
+             {
                 i = 1;
                 break;
             }   
-            case 'p': {
+            case 'p': 
+             {
                 system("clear");
-                try{
+                try
+                 {
                     mostrarPropostas(propostasAtuais);
-                }catch(QueueEmptyException& e){
+                }catch(QueueEmptyException& e)
+                 {
                     std::cout << e.what() << std::endl;
                 }
                 pressionarParaContinuar();
                 break;
             }  
-            case 'o': {
+            case 'o': 
+             {
                 system("clear");
-                try{
+                try
+                 {
                     mostrarOrdensServico(ordensAtuais);
-                }catch(QueueEmptyException& e){
+                }catch(QueueEmptyException& e)
+                 {
                     std::cout << e.what() << std::endl;
                 }
                 pressionarParaContinuar();
                 break;
             }  
-            case 'c': {
+            case 'c': 
+             {
                 system("clear");
                 abrirMenuCadastros(propostasAtuais, ordensAtuais, numPropostaAtual, numOrdemAtual);
                 break;
             }
-            case 'e': {
+            case 'e': 
+             {
                 system("clear");
                 abrirMenuEngenheiro(engenheiros, ordensAtuais);
                 break;
             }
          
-            case 'd': {
+            case 'd': 
+             {
                 system("clear");
                 abrirMenuContador(ct1, ordensAtuais);
                 break;
             }   
-            case 't': {
+            case 't': 
+             {
                 system("clear");
                 abrirMenuOrcamentista(orcamentistas, propostasAtuais);
                 break;
@@ -879,10 +994,12 @@ int main(){
     arqAux3 << numOrdemAtual;
     arqAux4 << numPropostaAtual;
     
-    for(auto it = ordensAtuais.begin(); it != ordensAtuais.end(); it++){
+    for(auto it = ordensAtuais.begin(); it != ordensAtuais.end(); it++)
+    {
         arqAux2 << **it;
     }
-    for(auto it = propostasAtuais.begin(); it != propostasAtuais.end(); it++){
+    for(auto it = propostasAtuais.begin(); it != propostasAtuais.end(); it++)
+    {
         arqAux1 << **it;
     }
     //após guardar os dados, os arquivos são fechados
@@ -891,21 +1008,25 @@ int main(){
     arqAux3.close();
     arqAux4.close();
     
-    for(int i = 0; i < engenheiros.size(); i++){
+    for(int i = 0; i < engenheiros.size(); i++)
+    {
         delete engenheiros.at(i);
     }
 
-    for(int i = 0; i < orcamentistas.size(); i++){
+    for(int i = 0; i < orcamentistas.size(); i++)
+    {
         delete orcamentistas.at(i);
     }
 
     delete ct1;
 
-    for(int i = 0; i < propostasAtuais.size(); i++){
+    for(int i = 0; i < propostasAtuais.size(); i++)
+    {
         delete propostasAtuais.at(i);
     }
 
-    for(int i = 0; i < ordensAtuais.size(); i++){
+    for(int i = 0; i < ordensAtuais.size(); i++)
+    {
         delete ordensAtuais.at(i);
     }
     
